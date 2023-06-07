@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>唐李锦的空间</title>
+  <icon>https://www.tanglijin.top/icon.png</icon>
+  
+  <link href="https://www.tanglijin.top/atom.xml" rel="self"/>
+  
+  <link href="https://www.tanglijin.top/"/>
+  <updated>2023-06-07T04:24:01.273Z</updated>
+  <id>https://www.tanglijin.top/</id>
+  
+  <author>
+    <name>唐李锦</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VSCode 功能推荐 - 对多目录搜索包含和排除目录</title>
+    <link href="https://www.tanglijin.top/2023/06/vscode-feature-sticky-scroll/"/>
+    <id>https://www.tanglijin.top/2023/06/vscode-feature-sticky-scroll/</id>
+    <published>2023-06-06T05:41:10.000Z</published>
+    <updated>2023-06-07T04:24:01.273Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;当在Search视图的结果树视图中右键单击文件夹时，上下文菜单中现在有两个新选项。&lt;a href=&quot;https://code.visualstudio.com/updates/v1_73#_include-and-exclude-folders-from-search&quot;&gt;官网介绍&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="VSCode 功能推荐" scheme="https://www.tanglijin.top/categories/VSCode-%E5%8A%9F%E8%83%BD%E6%8E%A8%E8%8D%90/"/>
+    
+    
+    <category term="VSCode" scheme="https://www.tanglijin.top/tags/VSCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VSCode 技巧 - 基础</title>
+    <link href="https://www.tanglijin.top/2023/05/vscode-skill-basic/"/>
+    <id>https://www.tanglijin.top/2023/05/vscode-skill-basic/</id>
+    <published>2023-05-29T00:26:10.000Z</published>
+    <updated>2023-06-07T04:24:01.273Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;声明： 本文档信息来源于&lt;a href=&quot;https://code.visualstudio.com/docs&quot;&gt;VSCode官方文档&lt;/a&gt;。&lt;/strong&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="VSCode 技巧" scheme="https://www.tanglijin.top/categories/VSCode-%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="VSCode" scheme="https://www.tanglijin.top/tags/VSCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VSCode 使用 - 编辑器 Editor</title>
+    <link href="https://www.tanglijin.top/2023/05/vscode-help-editor/"/>
+    <id>https://www.tanglijin.top/2023/05/vscode-help-editor/</id>
+    <published>2023-05-25T08:42:10.000Z</published>
+    <updated>2023-06-07T04:24:01.273Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;声明： 本文档信息来源于&lt;a href=&quot;https://code.visualstudio.com/docs&quot;&gt;VSCode官方文档&lt;/a&gt;。&lt;/strong&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="VSCode 使用" scheme="https://www.tanglijin.top/categories/VSCode-%E4%BD%BF%E7%94%A8/"/>
+    
+    
+    <category term="VSCode" scheme="https://www.tanglijin.top/tags/VSCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iTerm2 快捷键</title>
+    <link href="https://www.tanglijin.top/2023/05/iterm2-hot-key/"/>
+    <id>https://www.tanglijin.top/2023/05/iterm2-hot-key/</id>
+    <published>2023-05-25T02:02:10.000Z</published>
+    <updated>2023-06-07T04:24:01.261Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;配置文件&quot;&gt;&lt;a href=&quot;#配置文件&quot; class=&quot;headerlink&quot; title=&quot;配置文件&quot;&gt;&lt;/a&gt;配置文件&lt;/h2&gt;&lt;p&gt;Preferences &amp;gt; Profiles &amp;gt; Other Actions &amp;gt; Import JSON Profiles…&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/2023/05/iterm2-hot-key/Profiles.json&quot;&gt;点击下载&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="iTerm2" scheme="https://www.tanglijin.top/tags/iTerm2/"/>
+    
+    <category term="快捷键" scheme="https://www.tanglijin.top/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VSCode 功能推荐 - Sticky Scroll 粘性滚动</title>
+    <link href="https://www.tanglijin.top/2023/05/vscode-feature-sticky-scroll/"/>
+    <id>https://www.tanglijin.top/2023/05/vscode-feature-sticky-scroll/</id>
+    <published>2023-05-25T01:19:10.000Z</published>
+    <updated>2023-06-07T04:24:01.270Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;“sticky scroll”UI 将显示编辑器顶部所在的类&amp;#x2F;接口&amp;#x2F;名称空间&amp;#x2F;函数&amp;#x2F;方法&amp;#x2F;构造函数，帮助您了解文档中的位置。&lt;a href=&quot;https://code.visualstudio.com/updates/v1_70#_editor-sticky-scroll&quot;&gt;官网介绍&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="VSCode 功能推荐" scheme="https://www.tanglijin.top/categories/VSCode-%E5%8A%9F%E8%83%BD%E6%8E%A8%E8%8D%90/"/>
+    
+    
+    <category term="VSCode" scheme="https://www.tanglijin.top/tags/VSCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VSCode 扩展推荐 - Live Server 实时服务</title>
+    <link href="https://www.tanglijin.top/2023/05/vscode-extension-live-server/"/>
+    <id>https://www.tanglijin.top/2023/05/vscode-extension-live-server/</id>
+    <published>2023-05-25T00:10:10.000Z</published>
+    <updated>2023-06-07T04:24:01.262Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&quot;&gt;&lt;img src=&quot;/2023/05/vscode-extension-live-server/logo.png&quot; alt=&quot;Live Server&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;预览 HTML，PHP 文件，并实时刷新。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="VSCode 扩展推荐" scheme="https://www.tanglijin.top/categories/VSCode-%E6%89%A9%E5%B1%95%E6%8E%A8%E8%8D%90/"/>
+    
+    
+    <category term="VSCode" scheme="https://www.tanglijin.top/tags/VSCode/"/>
+    
+    <category term="扩展" scheme="https://www.tanglijin.top/tags/%E6%89%A9%E5%B1%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker 学习 10. Docker Compose</title>
+    <link href="https://www.tanglijin.top/2023/05/docker-study-10/"/>
+    <id>https://www.tanglijin.top/2023/05/docker-study-10/</id>
+    <published>2023-05-13T12:33:00.000Z</published>
+    <updated>2023-06-07T04:24:01.250Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;details class=&quot;note info no-icon&quot;&gt;&lt;summary&gt;&lt;p&gt;目录&lt;/p&gt;
+&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-1/&quot; title=&quot;Docker 学习 1.</summary>
+        
+      
+    
+    
+    
+    <category term="Docker 学习" scheme="https://www.tanglijin.top/categories/Docker-%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Docker" scheme="https://www.tanglijin.top/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker 学习 9. Docker 本地网络</title>
+    <link href="https://www.tanglijin.top/2023/05/docker-study-9/"/>
+    <id>https://www.tanglijin.top/2023/05/docker-study-9/</id>
+    <published>2023-05-13T07:12:00.000Z</published>
+    <updated>2023-06-07T04:24:01.261Z</updated>
+    
+    
+    <summary type="html">&lt;details class=&quot;note info no-icon&quot;&gt;&lt;summary&gt;&lt;p&gt;目录&lt;/p&gt;
+&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-1/&quot; title=&quot;Docker 学习 1. 原理&quot;&gt;Docker 学习 1. 原理&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-2/&quot; title=&quot;Docker 学习 2. 常用命令&quot;&gt;Docker 学习 2. 常用命令&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-3/&quot; title=&quot;Docker 学习 3. 编写 Dockerfile&quot;&gt;Docker 学习 3. 编写 Dockerfile&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-4/&quot; title=&quot;Docker 学习 4. Docker引擎架构&quot;&gt;Docker 学习 4. Docker引擎架构&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-5/&quot; title=&quot;Docker 学习 5. 容器退出命令&quot;&gt;Docker 学习 5. 容器退出命令&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-6/&quot; title=&quot;Docker 学习 6. 镜像导入导出和容器导入导出的区别&quot;&gt;Docker 学习 6. 镜像导入导出和容器导入导出的区别&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-7/&quot; title=&quot;Docker 学习 7. Docker Cache&quot;&gt;Docker 学习 7. Docker Cache&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-8/&quot; title=&quot;Docker 学习 8. 数据卷持久化&quot;&gt;Docker 学习 8. 数据卷持久化&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-9/&quot; title=&quot;Docker 学习 9. Docker 本地网络&quot;&gt;Docker 学习 9. Docker 本地网络&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/details&gt;
+
+
+&lt;h2 id=&quot;原理&quot;&gt;&lt;a href=&quot;#原理&quot; class=&quot;headerlink&quot; title=&quot;原理&quot;&gt;&lt;/a&gt;原理&lt;/h2&gt;&lt;p&gt;实现 linux 虚拟网络 veth pair + bridge 模型。每个容器会有一个或多个网卡，每个网卡会连接到某个网桥上的终端。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2023/05/docker-study-9/docker-network.drawio.png&quot; alt=&quot;原理&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Docker 学习" scheme="https://www.tanglijin.top/categories/Docker-%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Docker" scheme="https://www.tanglijin.top/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker 学习 8. 数据卷持久化</title>
+    <link href="https://www.tanglijin.top/2023/05/docker-study-8/"/>
+    <id>https://www.tanglijin.top/2023/05/docker-study-8/</id>
+    <published>2023-05-12T08:56:00.000Z</published>
+    <updated>2023-06-07T04:24:01.260Z</updated>
+    
+    
+    <summary type="html">&lt;details class=&quot;note info no-icon&quot;&gt;&lt;summary&gt;&lt;p&gt;目录&lt;/p&gt;
+&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-1/&quot; title=&quot;Docker 学习 1. 原理&quot;&gt;Docker 学习 1. 原理&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-2/&quot; title=&quot;Docker 学习 2. 常用命令&quot;&gt;Docker 学习 2. 常用命令&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-3/&quot; title=&quot;Docker 学习 3. 编写 Dockerfile&quot;&gt;Docker 学习 3. 编写 Dockerfile&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-4/&quot; title=&quot;Docker 学习 4. Docker引擎架构&quot;&gt;Docker 学习 4. Docker引擎架构&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-5/&quot; title=&quot;Docker 学习 5. 容器退出命令&quot;&gt;Docker 学习 5. 容器退出命令&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-6/&quot; title=&quot;Docker 学习 6. 镜像导入导出和容器导入导出的区别&quot;&gt;Docker 学习 6. 镜像导入导出和容器导入导出的区别&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-7/&quot; title=&quot;Docker 学习 7. Docker Cache&quot;&gt;Docker 学习 7. Docker Cache&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-8/&quot; title=&quot;Docker 学习 8. 数据卷持久化&quot;&gt;Docker 学习 8. 数据卷持久化&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-9/&quot; title=&quot;Docker 学习 9. Docker 本地网络&quot;&gt;Docker 学习 9. Docker 本地网络&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/details&gt;
+
+
+&lt;h2 id=&quot;数据卷简介&quot;&gt;&lt;a href=&quot;#数据卷简介&quot; class=&quot;headerlink&quot; title=&quot;数据卷简介&quot;&gt;&lt;/a&gt;数据卷简介&lt;/h2&gt;&lt;p&gt;数据卷是&lt;strong&gt;宿主机&lt;/strong&gt;中的一个特殊的文件&amp;#x2F;目录，这个文件&amp;#x2F;目录与容器中的另一个文件&amp;#x2F;目录进行了直接关联，在任何一端对文件&amp;#x2F;目录的写操作，在另一端都会同时发生相应变化。&lt;br&gt;在宿主中的这个文件&amp;#x2F;目录就称为数据卷，而容器中的这个关联文件&amp;#x2F;目录则称为该数据卷在该容器中的挂载点。·数据卷的设计目的就是为了实现数据持久化，其完全独立于容器的生命周期，属于宿主机文件系统，但不属于 UnionFS。因此，容器被删除时，不会删除其挂载的数据卷。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Docker 学习" scheme="https://www.tanglijin.top/categories/Docker-%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Docker" scheme="https://www.tanglijin.top/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker 学习 7. Docker Cache</title>
+    <link href="https://www.tanglijin.top/2023/05/docker-study-7/"/>
+    <id>https://www.tanglijin.top/2023/05/docker-study-7/</id>
+    <published>2023-05-12T07:45:00.000Z</published>
+    <updated>2023-06-07T04:24:01.258Z</updated>
+    
+    
+    <summary type="html">&lt;details class=&quot;note info no-icon&quot;&gt;&lt;summary&gt;&lt;p&gt;目录&lt;/p&gt;
+&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-1/&quot; title=&quot;Docker 学习 1. 原理&quot;&gt;Docker 学习 1. 原理&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-2/&quot; title=&quot;Docker 学习 2. 常用命令&quot;&gt;Docker 学习 2. 常用命令&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-3/&quot; title=&quot;Docker 学习 3. 编写 Dockerfile&quot;&gt;Docker 学习 3. 编写 Dockerfile&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-4/&quot; title=&quot;Docker 学习 4. Docker引擎架构&quot;&gt;Docker 学习 4. Docker引擎架构&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-5/&quot; title=&quot;Docker 学习 5. 容器退出命令&quot;&gt;Docker 学习 5. 容器退出命令&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-6/&quot; title=&quot;Docker 学习 6. 镜像导入导出和容器导入导出的区别&quot;&gt;Docker 学习 6. 镜像导入导出和容器导入导出的区别&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-7/&quot; title=&quot;Docker 学习 7. Docker Cache&quot;&gt;Docker 学习 7. Docker Cache&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-8/&quot; title=&quot;Docker 学习 8. 数据卷持久化&quot;&gt;Docker 学习 8. 数据卷持久化&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-9/&quot; title=&quot;Docker 学习 9. Docker 本地网络&quot;&gt;Docker 学习 9. Docker 本地网络&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/details&gt;
+
+
+&lt;h2 id=&quot;镜像组成&quot;&gt;&lt;a href=&quot;#镜像组成&quot; class=&quot;headerlink&quot; title=&quot;镜像组成&quot;&gt;&lt;/a&gt;镜像组成&lt;/h2&gt;&lt;p&gt;镜像由文件系统和 JSON 文件组成。所以相同的文件系统和 JSON 文件的镜像是同一个镜像，ImageID 必相同。&lt;br&gt;&lt;img src=&quot;/2023/05/docker-study-7/image-compose.drawio.png&quot; alt=&quot;镜像组成&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Docker 学习" scheme="https://www.tanglijin.top/categories/Docker-%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Docker" scheme="https://www.tanglijin.top/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker 学习 6. 镜像导入导出和容器导入导出的区别</title>
+    <link href="https://www.tanglijin.top/2023/05/docker-study-6/"/>
+    <id>https://www.tanglijin.top/2023/05/docker-study-6/</id>
+    <published>2023-05-12T01:08:00.000Z</published>
+    <updated>2023-06-07T04:24:01.257Z</updated>
+    
+    
+    <summary type="html">&lt;details class=&quot;note info no-icon&quot;&gt;&lt;summary&gt;&lt;p&gt;目录&lt;/p&gt;
+&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-1/&quot; title=&quot;Docker 学习 1. 原理&quot;&gt;Docker 学习 1. 原理&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-2/&quot; title=&quot;Docker 学习 2. 常用命令&quot;&gt;Docker 学习 2. 常用命令&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-3/&quot; title=&quot;Docker 学习 3. 编写 Dockerfile&quot;&gt;Docker 学习 3. 编写 Dockerfile&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-4/&quot; title=&quot;Docker 学习 4. Docker引擎架构&quot;&gt;Docker 学习 4. Docker引擎架构&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-5/&quot; title=&quot;Docker 学习 5. 容器退出命令&quot;&gt;Docker 学习 5. 容器退出命令&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-6/&quot; title=&quot;Docker 学习 6. 镜像导入导出和容器导入导出的区别&quot;&gt;Docker 学习 6. 镜像导入导出和容器导入导出的区别&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-7/&quot; title=&quot;Docker 学习 7. Docker Cache&quot;&gt;Docker 学习 7. Docker Cache&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-8/&quot; title=&quot;Docker 学习 8. 数据卷持久化&quot;&gt;Docker 学习 8. 数据卷持久化&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-9/&quot; title=&quot;Docker 学习 9. Docker 本地网络&quot;&gt;Docker 学习 9. Docker 本地网络&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/details&gt;
+
+
+&lt;h2 id=&quot;镜像-save-与容器-export&quot;&gt;&lt;a href=&quot;#镜像-save-与容器-export&quot; class=&quot;headerlink&quot; title=&quot;镜像 save 与容器 export&quot;&gt;&lt;/a&gt;镜像 save 与容器 export&lt;/h2&gt;&lt;p&gt;都可以保存为 tar 文件。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;镜像 save&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;容器 export&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;save 一次可以对多个镜像导出。&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;export 一次只能对一个容器导出。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;save 保存了原镜像的完整记录。&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;export 只是对当前容器的文件系统快照进行导出，会丢弃原镜像的所有历史记录与原数据信息。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;</summary>
+    
+    
+    
+    <category term="Docker 学习" scheme="https://www.tanglijin.top/categories/Docker-%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Docker" scheme="https://www.tanglijin.top/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker 学习 5. 容器退出命令</title>
+    <link href="https://www.tanglijin.top/2023/05/docker-study-5/"/>
+    <id>https://www.tanglijin.top/2023/05/docker-study-5/</id>
+    <published>2023-05-11T06:54:00.000Z</published>
+    <updated>2023-06-07T04:24:01.257Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;details class=&quot;note info no-icon&quot;&gt;&lt;summary&gt;&lt;p&gt;目录&lt;/p&gt;
+&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-1/&quot; title=&quot;Docker 学习 1.</summary>
+        
+      
+    
+    
+    
+    <category term="Docker 学习" scheme="https://www.tanglijin.top/categories/Docker-%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Docker" scheme="https://www.tanglijin.top/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker 学习 4. Docker引擎架构</title>
+    <link href="https://www.tanglijin.top/2023/05/docker-study-4/"/>
+    <id>https://www.tanglijin.top/2023/05/docker-study-4/</id>
+    <published>2023-05-11T01:43:00.000Z</published>
+    <updated>2023-06-07T04:24:01.250Z</updated>
+    
+    
+    <summary type="html">&lt;details class=&quot;note info no-icon&quot;&gt;&lt;summary&gt;&lt;p&gt;目录&lt;/p&gt;
+&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-1/&quot; title=&quot;Docker 学习 1. 原理&quot;&gt;Docker 学习 1. 原理&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-2/&quot; title=&quot;Docker 学习 2. 常用命令&quot;&gt;Docker 学习 2. 常用命令&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-3/&quot; title=&quot;Docker 学习 3. 编写 Dockerfile&quot;&gt;Docker 学习 3. 编写 Dockerfile&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-4/&quot; title=&quot;Docker 学习 4. Docker引擎架构&quot;&gt;Docker 学习 4. Docker引擎架构&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-5/&quot; title=&quot;Docker 学习 5. 容器退出命令&quot;&gt;Docker 学习 5. 容器退出命令&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-6/&quot; title=&quot;Docker 学习 6. 镜像导入导出和容器导入导出的区别&quot;&gt;Docker 学习 6. 镜像导入导出和容器导入导出的区别&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-7/&quot; title=&quot;Docker 学习 7. Docker Cache&quot;&gt;Docker 学习 7. Docker Cache&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-8/&quot; title=&quot;Docker 学习 8. 数据卷持久化&quot;&gt;Docker 学习 8. 数据卷持久化&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-9/&quot; title=&quot;Docker 学习 9. Docker 本地网络&quot;&gt;Docker 学习 9. Docker 本地网络&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/details&gt;
+
+
+&lt;p&gt;Docker&lt;strong&gt;现代&lt;/strong&gt;架构由五部分构成：Docker Client、Dockerd、Containerd、Runc 和 Shim：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Docker 学习" scheme="https://www.tanglijin.top/categories/Docker-%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Docker" scheme="https://www.tanglijin.top/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Macos 杀掉占用某个端口的进程</title>
+    <link href="https://www.tanglijin.top/2022/12/mac-kill-process/"/>
+    <id>https://www.tanglijin.top/2022/12/mac-kill-process/</id>
+    <published>2023-04-01T00:23:00.000Z</published>
+    <updated>2023-06-07T04:24:01.232Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Macos" scheme="https://www.tanglijin.top/tags/Macos/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Macos 查看硬盘已读写情况</title>
+    <link href="https://www.tanglijin.top/2023/03/macos-sdd-health/"/>
+    <id>https://www.tanglijin.top/2023/03/macos-sdd-health/</id>
+    <published>2023-03-30T02:29:00.000Z</published>
+    <updated>2023-06-07T04:24:01.250Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;下载 &lt;a href=&quot;https://www.smartmontools.org/&quot;&gt;smartmontools&lt;/a&gt; (官网有下载链接)。&lt;/li&gt;
+&lt;li&gt;安装。&lt;/li&gt;
+&lt;li&gt;命令行输入:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Macos" scheme="https://www.tanglijin.top/tags/Macos/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker 学习 3. 编写 Dockerfile</title>
+    <link href="https://www.tanglijin.top/2023/03/docker-study-3/"/>
+    <id>https://www.tanglijin.top/2023/03/docker-study-3/</id>
+    <published>2023-03-23T09:20:00.000Z</published>
+    <updated>2023-06-07T04:24:01.250Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;details class=&quot;note info no-icon&quot;&gt;&lt;summary&gt;&lt;p&gt;目录&lt;/p&gt;
+&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-1/&quot; title=&quot;Docker 学习 1.</summary>
+        
+      
+    
+    
+    
+    <category term="Docker 学习" scheme="https://www.tanglijin.top/categories/Docker-%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Docker" scheme="https://www.tanglijin.top/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker 学习 2. 常用命令</title>
+    <link href="https://www.tanglijin.top/2023/03/docker-study-2/"/>
+    <id>https://www.tanglijin.top/2023/03/docker-study-2/</id>
+    <published>2023-03-17T12:31:00.000Z</published>
+    <updated>2023-06-07T04:24:01.249Z</updated>
+    
+    
+    <summary type="html">&lt;details class=&quot;note info no-icon&quot;&gt;&lt;summary&gt;&lt;p&gt;目录&lt;/p&gt;
+&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-1/&quot; title=&quot;Docker 学习 1. 原理&quot;&gt;Docker 学习 1. 原理&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-2/&quot; title=&quot;Docker 学习 2. 常用命令&quot;&gt;Docker 学习 2. 常用命令&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-3/&quot; title=&quot;Docker 学习 3. 编写 Dockerfile&quot;&gt;Docker 学习 3. 编写 Dockerfile&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-4/&quot; title=&quot;Docker 学习 4. Docker引擎架构&quot;&gt;Docker 学习 4. Docker引擎架构&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-5/&quot; title=&quot;Docker 学习 5. 容器退出命令&quot;&gt;Docker 学习 5. 容器退出命令&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-6/&quot; title=&quot;Docker 学习 6. 镜像导入导出和容器导入导出的区别&quot;&gt;Docker 学习 6. 镜像导入导出和容器导入导出的区别&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-7/&quot; title=&quot;Docker 学习 7. Docker Cache&quot;&gt;Docker 学习 7. Docker Cache&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-8/&quot; title=&quot;Docker 学习 8. 数据卷持久化&quot;&gt;Docker 学习 8. 数据卷持久化&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-9/&quot; title=&quot;Docker 学习 9. Docker 本地网络&quot;&gt;Docker 学习 9. Docker 本地网络&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/details&gt;
+
+
+&lt;h2 id=&quot;查看-Docker-版本&quot;&gt;&lt;a href=&quot;#查看-Docker-版本&quot; class=&quot;headerlink&quot; title=&quot;查看 Docker 版本&quot;&gt;&lt;/a&gt;查看 Docker 版本&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;docker version&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;查看-Docker-详细信息&quot;&gt;&lt;a href=&quot;#查看-Docker-详细信息&quot; class=&quot;headerlink&quot; title=&quot;查看 Docker 详细信息&quot;&gt;&lt;/a&gt;查看 Docker 详细信息&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;docker info&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 或者查看某项信息&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;docker info |grep Root&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Docker 学习" scheme="https://www.tanglijin.top/categories/Docker-%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Docker" scheme="https://www.tanglijin.top/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker 学习 1. 原理</title>
+    <link href="https://www.tanglijin.top/2023/03/docker-study-1/"/>
+    <id>https://www.tanglijin.top/2023/03/docker-study-1/</id>
+    <published>2023-03-17T00:07:00.000Z</published>
+    <updated>2023-06-07T04:24:01.249Z</updated>
+    
+    
+    <summary type="html">&lt;details class=&quot;note info no-icon&quot;&gt;&lt;summary&gt;&lt;p&gt;目录&lt;/p&gt;
+&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-1/&quot; title=&quot;Docker 学习 1. 原理&quot;&gt;Docker 学习 1. 原理&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-2/&quot; title=&quot;Docker 学习 2. 常用命令&quot;&gt;Docker 学习 2. 常用命令&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-3/&quot; title=&quot;Docker 学习 3. 编写 Dockerfile&quot;&gt;Docker 学习 3. 编写 Dockerfile&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-4/&quot; title=&quot;Docker 学习 4. Docker引擎架构&quot;&gt;Docker 学习 4. Docker引擎架构&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-5/&quot; title=&quot;Docker 学习 5. 容器退出命令&quot;&gt;Docker 学习 5. 容器退出命令&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-6/&quot; title=&quot;Docker 学习 6. 镜像导入导出和容器导入导出的区别&quot;&gt;Docker 学习 6. 镜像导入导出和容器导入导出的区别&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-7/&quot; title=&quot;Docker 学习 7. Docker Cache&quot;&gt;Docker 学习 7. Docker Cache&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-8/&quot; title=&quot;Docker 学习 8. 数据卷持久化&quot;&gt;Docker 学习 8. 数据卷持久化&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-9/&quot; title=&quot;Docker 学习 9. Docker 本地网络&quot;&gt;Docker 学习 9. Docker 本地网络&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/details&gt;
+
+
+&lt;h2 id=&quot;为什么会有-Docker&quot;&gt;&lt;a href=&quot;#为什么会有-Docker&quot; class=&quot;headerlink&quot; title=&quot;为什么会有 Docker ?&quot;&gt;&lt;/a&gt;为什么会有 Docker ?&lt;/h2&gt;&lt;p&gt;在 Docker 出现之前，如果要实现在一台电脑上同时运行多系统，需要使用虚拟机，例如 VMware。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Docker 学习" scheme="https://www.tanglijin.top/categories/Docker-%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Docker" scheme="https://www.tanglijin.top/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 常用命令</title>
+    <link href="https://www.tanglijin.top/2023/02/linux-command/"/>
+    <id>https://www.tanglijin.top/2023/02/linux-command/</id>
+    <published>2023-02-24T03:38:00.000Z</published>
+    <updated>2023-06-07T04:24:01.245Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;版本&quot;&gt;&lt;a href=&quot;#版本&quot; class=&quot;headerlink&quot; title=&quot;版本&quot;&gt;&lt;/a&gt;版本&lt;/h2&gt;&lt;h3 id=&quot;内核版本&quot;&gt;&lt;a href=&quot;#内核版本&quot; class=&quot;headerlink&quot; title=&quot;内核版本&quot;&gt;&lt;/a&gt;内核版本&lt;/h3&gt;&lt;p&gt;&lt;code&gt;cat /proc/version&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;uname -a&lt;/code&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术积累" scheme="https://www.tanglijin.top/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/"/>
+    
+    
+    <category term="Linux" scheme="https://www.tanglijin.top/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WSL 常用命令</title>
+    <link href="https://www.tanglijin.top/2023/02/wsl-command/"/>
+    <id>https://www.tanglijin.top/2023/02/wsl-command/</id>
+    <published>2023-02-23T08:04:00.000Z</published>
+    <updated>2023-06-07T04:24:01.249Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;WSL-常用命令&quot;&gt;&lt;a href=&quot;#WSL-常用命令&quot; class=&quot;headerlink&quot; title=&quot;WSL 常用命令&quot;&gt;&lt;/a&gt;WSL 常用命令&lt;/h2&gt;&lt;h3 id=&quot;安装-WSL&quot;&gt;&lt;a href=&quot;#安装-WSL&quot; class=&quot;headerlink&quot; title=&quot;安装 WSL&quot;&gt;&lt;/a&gt;安装 WSL&lt;/h3&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;wsl --install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="技术积累" scheme="https://www.tanglijin.top/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/"/>
+    
+    
+    <category term="WSL" scheme="https://www.tanglijin.top/tags/WSL/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/downloads/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/downloads/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/downloads/images/favicon/favicon-16x16.png">
+  <link rel="mask-icon" href="/downloads/images/favicon/favicon.svg" color="#222">
+  <meta name="google-site-verification" content="_2OctYreBeDkfTRiEHaXwB0wYaMK6F84qG97fNjM4qc">
+  <meta name="msvalidate.01" content="84BDF5B17B36630CC4297E351B2B0D64">
+  <meta name="baidu-site-verification" content="code-kuUu52WEwj">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.tanglijin.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"style":"flat","show_result":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":true,"nav":{"utterances":{"order":-1},"changyan":{"text":"畅言","order":0},"livere":{"text":"来必力","order":1},"valine":{"order":2},"disqus":{"order":3},"disqusjs":{"order":4},"gitalk":{"order":5},"giscus":{"order":6}},"activeClass":"utterances"},"stickytabs":true,"motion":{"enable":true,"async":true,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"HWL3YK5R6C","apiKey":"17ce0bb5e5dc71bf5e3e37006cc05b55","indexName":"blog","hits":{"per_page":10}}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="声明： 本文档信息来源于VSCode官方文档。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VSCode 使用 - 编辑器 Editor">
+<meta property="og:url" content="https://www.tanglijin.top/2023/05/vscode-help-editor/index.html">
+<meta property="og:site_name" content="唐李锦的空间">
+<meta property="og:description" content="声明： 本文档信息来源于VSCode官方文档。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/interactive_playground.png">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/multicursor.gif">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/add_cursor_current_selection.gif">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/add_cursor_current_selection_one_by_one.gif">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/editor/codebasics/expandselection.gif">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/column-select.gif">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/copy_line_down.gif">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/move_line.gif">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/transform-text-commands.png">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/code_formatting.gif">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/code_folding.gif">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/intellisense.gif">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/peek.gif">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/goto_definition.gif">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/find_all_references.gif">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/rename_symbol.gif">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/QuickOpen.gif">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/quick-open-command-dropdown.png">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/find_by_symbol.gif">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/group_symbols_by_kind.png">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/go_to_symbol_in_workspace.png">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/getstarted/userinterface/grid-layout-menu.png">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/getstarted/userinterface/grid-dnd.gif">
+<meta property="og:image" content="https://code.visualstudio.com/assets/docs/getstarted/userinterface/grid-alt.gif">
+<meta property="article:published_time" content="2023-05-25T08:42:10.000Z">
+<meta property="article:modified_time" content="2023-06-07T04:24:01.273Z">
+<meta property="article:author" content="唐李锦">
+<meta property="article:tag" content="VSCode">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/interactive_playground.png">
+
+
+<link rel="canonical" href="https://www.tanglijin.top/2023/05/vscode-help-editor/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.tanglijin.top/2023/05/vscode-help-editor/","path":"2023/05/vscode-help-editor/","title":"VSCode 使用 - 编辑器 Editor"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>VSCode 使用 - 编辑器 Editor | 唐李锦的空间</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSZ6XMJ0XL"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-WSZ6XMJ0XL","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?85df606204b9d08c7ff41bedceef09f7"></script>
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="唐李锦的空间" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">唐李锦的空间</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">59</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">15</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">65</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li><li class="menu-item menu-item-友情链接"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友情链接</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container">
+  <div class="algolia-stats"><hr></div>
+  <div class="algolia-hits"></div>
+  <div class="algolia-pagination"></div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%BE%91%E5%99%A8%E6%BC%94%E7%BB%83%E5%9C%BA"><span class="nav-number">1.</span> <span class="nav-text">编辑器演练场</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E6%A0%87"><span class="nav-number">2.</span> <span class="nav-text">光标</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E5%85%89%E6%A0%87%E9%80%89%E6%8B%A9"><span class="nav-number">2.1.</span> <span class="nav-text">多光标选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%92%A4%E9%94%80%E5%85%89%E6%A0%87%E4%BD%8D%E7%BD%AE"><span class="nav-number">2.2.</span> <span class="nav-text">撤销光标位置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9"><span class="nav-number">3.</span> <span class="nav-text">选择</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%B6%E7%BC%A9-x2F-%E6%89%A9%E5%BC%A0%E9%80%89%E6%8B%A9"><span class="nav-number">3.1.</span> <span class="nav-text">收缩&#x2F;扩张选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E9%80%89%E6%8B%A9"><span class="nav-number">3.2.</span> <span class="nav-text">列选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E9%80%89%E6%8B%A9%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.3.</span> <span class="nav-text">列选择模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%91%E4%B8%8A-x2F-%E4%B8%8B"><span class="nav-number">4.</span> <span class="nav-text">向上&#x2F;下</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%91%E4%B8%8A-x2F-%E4%B8%8B%E5%A4%8D%E5%88%B6%E8%A1%8C"><span class="nav-number">4.1.</span> <span class="nav-text">向上&#x2F;下复制行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%91%E4%B8%8A-x2F-%E4%B8%8B%E7%A7%BB%E5%8A%A8%E8%A1%8C"><span class="nav-number">4.2.</span> <span class="nav-text">向上&#x2F;下移动行</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2"><span class="nav-number">5.</span> <span class="nav-text">大小写转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="nav-number">6.</span> <span class="nav-text">格式化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%98%E5%8F%A0"><span class="nav-number">7.</span> <span class="nav-text">折叠</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E6%8A%98%E5%8F%A0"><span class="nav-number">7.1.</span> <span class="nav-text">代码折叠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E6%8A%98%E5%8F%A0"><span class="nav-number">7.2.</span> <span class="nav-text">递归折叠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E4%BB%A3%E7%A0%81%E6%8A%98%E5%8F%A0"><span class="nav-number">7.3.</span> <span class="nav-text">选择代码折叠</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%98%BE%E7%A4%BA%E5%BB%BA%E8%AE%AE"><span class="nav-number">8.</span> <span class="nav-text">显示建议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">9.</span> <span class="nav-text">定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%AE%9A%E4%B9%89"><span class="nav-number">9.1.</span> <span class="nav-text">查看定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%B3%E8%BD%AC%E5%88%B0%E5%AE%9A%E4%B9%89"><span class="nav-number">9.2.</span> <span class="nav-text">跳转到定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E5%88%B0%E5%BC%95%E7%94%A8"><span class="nav-number">9.3.</span> <span class="nav-text">转到引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%89%80%E6%9C%89%E5%BC%95%E7%94%A8"><span class="nav-number">9.4.</span> <span class="nav-text">查看所有引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%B3%E8%BD%AC%E5%88%B0%E5%AE%9E%E7%8E%B0"><span class="nav-number">9.5.</span> <span class="nav-text">跳转到实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E6%9E%84"><span class="nav-number">9.6.</span> <span class="nav-text">重构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E5%91%BD%E5%90%8D%E5%8F%98%E9%87%8F"><span class="nav-number">10.</span> <span class="nav-text">重命名变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%93%E5%BC%80"><span class="nav-number">11.</span> <span class="nav-text">打开</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E6%89%93%E5%BC%80"><span class="nav-number">11.1.</span> <span class="nav-text">快速打开</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6"><span class="nav-number">11.2.</span> <span class="nav-text">快速打开多个文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%B3%E8%BD%AC"><span class="nav-number">12.</span> <span class="nav-text">跳转</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%B3%E8%BD%AC%E5%88%B0%E6%96%87%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F"><span class="nav-number">12.1.</span> <span class="nav-text">跳转到文中的变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%B3%E8%BD%AC%E5%B7%A5%E4%BD%9C%E5%8C%BA%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F"><span class="nav-number">12.2.</span> <span class="nav-text">跳转工作区中的变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%B3%E8%BD%AC%E5%88%B0%E6%8C%87%E5%AE%9A%E8%A1%8C"><span class="nav-number">12.3.</span> <span class="nav-text">跳转到指定行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%B3%E8%BD%AC%E5%88%B0%E6%96%87%E4%BB%B6%E5%A4%B4%E9%83%A8%E5%92%8C%E5%B0%BE%E9%83%A8"><span class="nav-number">12.4.</span> <span class="nav-text">跳转到文件头部和尾部</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%83%E5%B1%80"><span class="nav-number">13.</span> <span class="nav-text">布局</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E8%BE%91%E5%99%A8%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80"><span class="nav-number">13.1.</span> <span class="nav-text">编辑器网格布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%87%E6%8D%A2%E7%BC%96%E8%BE%91%E5%99%A8%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-number">13.2.</span> <span class="nav-text">切换编辑器快捷键</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tab%E6%98%BE%E7%A4%BA%E5%B7%A5%E4%BD%9C%E5%8C%BA"><span class="nav-number">14.</span> <span class="nav-text">tab显示工作区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80-x2F-%E5%85%B3Tab"><span class="nav-number">15.</span> <span class="nav-text">开&#x2F;关Tab</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%92%8C%E5%B9%B6%E8%A1%8C"><span class="nav-number">16.</span> <span class="nav-text">和并行</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="唐李锦"
+      src="/downloads/images/avatar.png">
+  <p class="site-author-name" itemprop="name">唐李锦</p>
+  <div class="site-description" itemprop="description">我的名字叫唐李锦，这是我的空间。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">65</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">59</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="/downloads/images/wechat.png" title="微信 → &#x2F;downloads&#x2F;images&#x2F;wechat.png" rel="noopener me"><i class="fa fa-comments fa-fw"></i>微信</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/ljtang2009" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ljtang2009" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:ho_ho_gl@hotmail.com" title="E-Mail → mailto:ho_ho_gl@hotmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.tanglijin.top/2023/05/vscode-help-editor/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/downloads/images/avatar.png">
+      <meta itemprop="name" content="唐李锦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="唐李锦的空间">
+      <meta itemprop="description" content="我的名字叫唐李锦，这是我的空间。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="VSCode 使用 - 编辑器 Editor | 唐李锦的空间">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          VSCode 使用 - 编辑器 Editor
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-05-25 16:42:10" itemprop="dateCreated datePublished" datetime="2023-05-25T16:42:10+08:00">2023-05-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-06-07 12:24:01" itemprop="dateModified" datetime="2023-06-07T12:24:01+08:00">2023-06-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/VSCode-%E4%BD%BF%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">VSCode 使用</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><strong>声明： 本文档信息来源于<a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs">VSCode官方文档</a>。</strong></p>
+
+
+<span id="more"></span>
+
+<h2 id="编辑器演练场"><a href="#编辑器演练场" class="headerlink" title="编辑器演练场"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_getting-started">编辑器演练场</a></h2><p>帮助 &gt; 编辑器演练场</p>
+<img alt="编辑器演练场" src="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/interactive_playground.png" width="60%">
+
+<h2 id="光标"><a href="#光标" class="headerlink" title="光标"></a>光标</h2><h3 id="多光标选择"><a href="#多光标选择" class="headerlink" title="多光标选择"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_multi-cursor-selection">多光标选择</a></h3><p>添加光标：<strong>Option+Click</strong><br>键盘快捷方式: <strong>⌥⌘↑</strong> 或 <strong>⌥⌘↓</strong></p>
+<img alt="添加光标" src="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/multicursor.gif" width="60%">
+
+<p>根据当前选择的内容，对所有同样的内容添加选择光标：<strong>⇧⌘L</strong></p>
+<img alt="对所有同样的内容添加选择光标" src="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/add_cursor_current_selection.gif" width="60%">
+
+<p>根据当前选择的内容，对下一个同样的内容添加选择光标：<strong>⌘D</strong></p>
+<img alt="对下一个同样的内容添加选择光标" src="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/add_cursor_current_selection_one_by_one.gif" width="60%">
+
+<h3 id="撤销光标位置"><a href="#撤销光标位置" class="headerlink" title="撤销光标位置"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_undo-cursor-position">撤销光标位置</a></h3><p><strong>⌘U</strong></p>
+<h2 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h2><h3 id="收缩-x2F-扩张选择"><a href="#收缩-x2F-扩张选择" class="headerlink" title="收缩&#x2F;扩张选择"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/editor/codebasics#_shrinkexpand-selection">收缩&#x2F;扩张选择</a></h3><p><strong>⌃⇧⌘←</strong> 和 <strong>⌃⇧⌘→</strong></p>
+<img alt="收缩/扩张选择" src="https://code.visualstudio.com/assets/docs/editor/codebasics/expandselection.gif" width="60%">
+
+<h3 id="列选择"><a href="#列选择" class="headerlink" title="列选择"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/editor/codebasics#_column-box-selection">列选择</a></h3><p>按住 <strong>Shift+Option</strong> 选择。</p>
+<img alt="列选择" src="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/column-select.gif" width="60%">
+
+<h3 id="列选择模式"><a href="#列选择模式" class="headerlink" title="列选择模式"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/editor/codebasics#_column-selection-mode">列选择模式</a></h3><p><strong>选择 &gt; 列选择模式</strong></p>
+<h2 id="向上-x2F-下"><a href="#向上-x2F-下" class="headerlink" title="向上&#x2F;下"></a>向上&#x2F;下</h2><h3 id="向上-x2F-下复制行"><a href="#向上-x2F-下复制行" class="headerlink" title="向上&#x2F;下复制行"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_copy-line-up-down">向上&#x2F;下复制行</a></h3><p><strong>⇧⌥↑</strong> or <strong>⇧⌥↓</strong></p>
+<img alt="向上/下复制行" src="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/copy_line_down.gif" width="60%">
+
+<h3 id="向上-x2F-下移动行"><a href="#向上-x2F-下移动行" class="headerlink" title="向上&#x2F;下移动行"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_move-line-up-and-down">向上&#x2F;下移动行</a></h3><p><strong>⌥↑</strong> or <strong>⌥↓</strong></p>
+<img alt="向上/下移动行" src="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/move_line.gif" width="60%">
+
+<h2 id="大小写转换"><a href="#大小写转换" class="headerlink" title="大小写转换"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_transform-text-commands">大小写转换</a></h2><p>命令面板中输入 <strong>Transform</strong></p>
+<img alt="大小写转换" src="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/transform-text-commands.png" width="60%">
+
+<h2 id="格式化"><a href="#格式化" class="headerlink" title="格式化"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_code-formatting">格式化</a></h2><p>选中代码格式化: <strong>⌘K ⌘F</strong><br>整个文档格式话：<strong>⇧⌥F</strong></p>
+<img alt="格式化" src="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/code_formatting.gif" width="60%">
+
+<h2 id="折叠"><a href="#折叠" class="headerlink" title="折叠"></a>折叠</h2><h3 id="代码折叠"><a href="#代码折叠" class="headerlink" title="代码折叠"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_code-folding">代码折叠</a></h3><p>当前区域：<strong>⌥⌘[</strong> and <strong>⌥⌘]</strong></p>
+<img alt="代码折叠" src="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/code_folding.gif" width="60%">
+
+<p>整个文档：<strong>⌘K ⌘0</strong> and <strong>⌘K ⌘J</strong><br>整个文档注释折叠：<strong>⌘K ⌘&#x2F;</strong></p>
+<h3 id="递归折叠"><a href="#递归折叠" class="headerlink" title="递归折叠"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/editor/codebasics#_folding">递归折叠</a></h3><p>开关折叠： <strong>⌘K ⌘L</strong><br>递归折叠: <strong>⌘K ⌘[</strong><br>递归展开: <strong>⌘K ⌘]</strong></p>
+<p>使用折叠标记 <strong>&#x2F;&#x2F;#region</strong> ， <strong>&#x2F;&#x2F;#endregion</strong></p>
+<h3 id="选择代码折叠"><a href="#选择代码折叠" class="headerlink" title="选择代码折叠"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/editor/codebasics#_fold-selection">选择代码折叠</a></h3><p>创建折叠区域: <strong>⌘K ⌘,</strong><br>移除折叠区域: <strong>⌘K ⌘.</strong></p>
+<h2 id="显示建议"><a href="#显示建议" class="headerlink" title="显示建议"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_intellisense">显示建议</a></h2><p><strong>⌘I</strong></p>
+<img alt="显示建议" src="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/intellisense.gif" width="60%">
+
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><h3 id="查看定义"><a href="#查看定义" class="headerlink" title="查看定义"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_peek">查看定义</a></h3><p><strong>⌥F12</strong></p>
+<img alt="查看定义" src="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/peek.gif" width="60%">
+
+<h3 id="跳转到定义"><a href="#跳转到定义" class="headerlink" title="跳转到定义"></a>跳转到定义</h3><p><strong>F12</strong> 或 <strong>⌘ + click</strong></p>
+<img alt="跳转到定义" src="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/goto_definition.gif" width="60%">
+
+<h3 id="转到引用"><a href="#转到引用" class="headerlink" title="转到引用"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_go-to-references">转到引用</a></h3><p><strong>⇧F12</strong></p>
+<img alt="转到引用" src="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/find_all_references.gif" width="60%">
+
+<h3 id="查看所有引用"><a href="#查看所有引用" class="headerlink" title="查看所有引用"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_find-all-references-view">查看所有引用</a></h3><p><strong>⇧⌥F12</strong></p>
+<h3 id="跳转到实现"><a href="#跳转到实现" class="headerlink" title="跳转到实现"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/editor/editingevolved#_go-to-implementation">跳转到实现</a></h3><p><strong>⌘F12</strong></p>
+<p>如果选择一个接口，这将查看该接口的所有实现。</p>
+<h3 id="重构"><a href="#重构" class="headerlink" title="重构"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/editor/refactoring#_code-actions-quick-fixes-and-refactorings">重构</a></h3><p><strong>⌃⇧R</strong></p>
+<h2 id="重命名变量"><a href="#重命名变量" class="headerlink" title="重命名变量"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_rename-symbol">重命名变量</a></h2><p><strong>F2</strong></p>
+<img alt="重命名变量" src="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/rename_symbol.gif" width="60%">
+
+<h2 id="打开"><a href="#打开" class="headerlink" title="打开"></a>打开</h2><h3 id="快速打开"><a href="#快速打开" class="headerlink" title="快速打开"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_quick-open">快速打开</a></h3><p><strong>⌘P</strong></p>
+<img alt="快速打开" src="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/QuickOpen.gif" width="60%">
+
+<p>输入 <strong>?</strong> 显示命令建议</p>
+<img alt="命令建议" src="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/quick-open-command-dropdown.png" width="60%">
+
+<h3 id="快速打开多个文件"><a href="#快速打开多个文件" class="headerlink" title="快速打开多个文件"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_open-multiple-files-from-quick-open">快速打开多个文件</a></h3><p><strong>⌘P➡️</strong></p>
+<h2 id="跳转"><a href="#跳转" class="headerlink" title="跳转"></a>跳转</h2><h3 id="跳转到文中的变量"><a href="#跳转到文中的变量" class="headerlink" title="跳转到文中的变量"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_go-to-symbol-in-file">跳转到文中的变量</a></h3><p><strong>⇧⌘O</strong></p>
+<img alt="跳转到文中的变量" src="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/find_by_symbol.gif" width="60%">
+
+<p>如果要把变量分组，则输入 <strong>@:</strong></p>
+<img alt="变量分组" src="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/group_symbols_by_kind.png" width="60%">
+
+<h3 id="跳转工作区中的变量"><a href="#跳转工作区中的变量" class="headerlink" title="跳转工作区中的变量"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_go-to-symbol-in-workspace">跳转工作区中的变量</a></h3><p><strong>⌘T</strong></p>
+<img alt="跳转工作区中的变量" src="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/go_to_symbol_in_workspace.png" width="60%">
+
+<h3 id="跳转到指定行"><a href="#跳转到指定行" class="headerlink" title="跳转到指定行"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_navigate-to-a-specific-line">跳转到指定行</a></h3><p><strong>⌃G</strong></p>
+<h3 id="跳转到文件头部和尾部"><a href="#跳转到文件头部和尾部" class="headerlink" title="跳转到文件头部和尾部"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_navigate-to-beginning-and-end-of-file">跳转到文件头部和尾部</a></h3><p><strong>⌘↑</strong> and <strong>⌘↓</strong></p>
+<h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><h3 id="编辑器网格布局"><a href="#编辑器网格布局" class="headerlink" title="编辑器网格布局"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/getstarted/userinterface#_grid-editor-layout">编辑器网格布局</a></h3><p><strong>查看 &gt; 编辑器布局</strong></p>
+<img alt="编辑器网格布局" src="https://code.visualstudio.com/assets/docs/getstarted/userinterface/grid-layout-menu.png" width="60%">
+
+<p>鼠标拖动 编辑器 Tab，调整布局（如果同时按住 <strong>⌥</strong> , 会有分裂效果）：</p>
+<img alt="鼠标拖动tab，调整布局" src="https://code.visualstudio.com/assets/docs/getstarted/userinterface/grid-dnd.gif" width="60%">
+
+<p>分裂编辑器 Tab 快捷按钮（按住 <strong>⌥</strong> 可调整分裂方向）：</p>
+<img alt="分裂编辑器Tab快捷按钮" src="https://code.visualstudio.com/assets/docs/getstarted/userinterface/grid-alt.gif" width="60%">
+
+<h3 id="切换编辑器快捷键"><a href="#切换编辑器快捷键" class="headerlink" title="切换编辑器快捷键"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/getstarted/userinterface#_keyboard-shortcuts">切换编辑器快捷键</a></h3><p>切换到右边的编辑器: <strong>⌥⌘→</strong><br>切换到左边的编辑器: <strong>⌥⌘←</strong><br>切换到最左边的编辑器组: <strong>⌘1</strong><br>切换到中间的编辑器组: <strong>⌘2</strong><br>切换到最右边的编辑器组: <strong>⌘3</strong><br>关闭当前编辑器: <strong>⌘W</strong><br>关闭编辑器组内的所有编辑器: <strong>⌘K W</strong><br>关闭所有编辑器: <strong>⌘K ⌘W</strong></p>
+<h2 id="tab显示工作区"><a href="#tab显示工作区" class="headerlink" title="tab显示工作区"></a><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/editor/multi-root-workspaces#_editor">tab显示工作区</a></h2><p>“workbench.editor.labelFormat”: “medium”</p>
+<h2 id="开-x2F-关Tab"><a href="#开-x2F-关Tab" class="headerlink" title="开&#x2F;关Tab"></a>开&#x2F;关Tab</h2><p>关闭: <strong>⌘W</strong><br>重新打开已关闭的：<strong>⇧⌘T</strong></p>
+<h2 id="和并行"><a href="#和并行" class="headerlink" title="和并行"></a>和并行</h2><p><strong>⌃J</strong></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/downloads/images/reward/wechatpay.png" alt="唐李锦 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/downloads/images/reward/alipay.png" alt="唐李锦 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>唐李锦
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.tanglijin.top/2023/05/vscode-help-editor/" title="VSCode 使用 - 编辑器 Editor">https://www.tanglijin.top/2023/05/vscode-help-editor/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/VSCode/" rel="tag"><i class="fa fa-tag"></i> VSCode</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/05/iterm2-hot-key/" rel="prev" title="iTerm2 快捷键">
+                  <i class="fa fa-chevron-left"></i> iTerm2 快捷键
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/05/vscode-skill-basic/" rel="next" title="VSCode 技巧 - 基础">
+                  VSCode 技巧 - 基础 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2022 – 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">唐李锦</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/4.17.1/algoliasearch-lite.umd.js" integrity="sha256-F7emIId74fYoGrHzsnu3iClRHIbBMhMCbxDoA1cfMAY=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.56.1/instantsearch.production.min.js" integrity="sha256-lz9C+x8+6w2rh56x5TrH5iYmE4Js2FiJS5h0tuMz7hQ=" crossorigin="anonymous"></script><script src="/js/third-party/search/algolia-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"ljtang2009/blog","issue_term":"pathname","theme":"preferred-color-scheme","label":"Utteranc"}</script>
+<script src="/js/third-party/comments/utterances.js"></script>
+
+</body>
+</html>
