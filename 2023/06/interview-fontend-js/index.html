@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/downloads/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/downloads/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/downloads/images/favicon/favicon-16x16.png">
+  <link rel="mask-icon" href="/downloads/images/favicon/favicon.svg" color="#222">
+  <meta name="google-site-verification" content="_2OctYreBeDkfTRiEHaXwB0wYaMK6F84qG97fNjM4qc">
+  <meta name="msvalidate.01" content="84BDF5B17B36630CC4297E351B2B0D64">
+  <meta name="baidu-site-verification" content="code-kuUu52WEwj">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.tanglijin.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"style":"flat","show_result":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":true,"nav":{"utterances":{"order":-1},"changyan":{"text":"畅言","order":0},"livere":{"text":"来必力","order":1},"valine":{"order":2},"disqus":{"order":3},"disqusjs":{"order":4},"gitalk":{"order":5},"giscus":{"order":6}},"activeClass":"utterances"},"stickytabs":true,"motion":{"enable":true,"async":true,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"HWL3YK5R6C","apiKey":"17ce0bb5e5dc71bf5e3e37006cc05b55","indexName":"blog","hits":{"per_page":10}}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="介绍 JS 有哪些内置对象？ 数据封装类对象(可以 new 的)：Object、Array、Boolean、Number、String 其他对象：Function、Arguments、Math、Date、RegExp、Error ES6 新增对象：Symbol（标识唯一性的 ID）、Map、Set、Promises、Proxy、Reflect">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试题 - 前端 - JS">
+<meta property="og:url" content="https://www.tanglijin.top/2023/06/interview-fontend-js/index.html">
+<meta property="og:site_name" content="唐李锦的空间">
+<meta property="og:description" content="介绍 JS 有哪些内置对象？ 数据封装类对象(可以 new 的)：Object、Array、Boolean、Number、String 其他对象：Function、Arguments、Math、Date、RegExp、Error ES6 新增对象：Symbol（标识唯一性的 ID）、Map、Set、Promises、Proxy、Reflect">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.tanglijin.top/2023/06/interview-fontend-js/cookie%E5%92%8Csession%E9%89%B4%E6%9D%83-%E4%BC%A0%E7%BB%9Fcookie%E9%AA%8C%E8%AF%81.drawio.png">
+<meta property="og:image" content="https://www.tanglijin.top/2023/06/interview-fontend-js/cookie%E5%92%8Csession%E9%89%B4%E6%9D%83-session%E9%AA%8C%E8%AF%81.drawio.png">
+<meta property="og:image" content="https://www.tanglijin.top/2023/06/interview-fontend-js/cookie%E5%92%8Csession%E9%89%B4%E6%9D%83-%E7%BC%93%E5%AD%98.drawio.png">
+<meta property="article:published_time" content="2023-06-30T02:51:00.000Z">
+<meta property="article:modified_time" content="2023-07-08T10:01:51.410Z">
+<meta property="article:author" content="唐李锦">
+<meta property="article:tag" content="面试题">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="JS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.tanglijin.top/2023/06/interview-fontend-js/cookie%E5%92%8Csession%E9%89%B4%E6%9D%83-%E4%BC%A0%E7%BB%9Fcookie%E9%AA%8C%E8%AF%81.drawio.png">
+
+
+<link rel="canonical" href="https://www.tanglijin.top/2023/06/interview-fontend-js/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.tanglijin.top/2023/06/interview-fontend-js/","path":"2023/06/interview-fontend-js/","title":"面试题 - 前端 - JS"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>面试题 - 前端 - JS | 唐李锦的空间</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSZ6XMJ0XL"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-WSZ6XMJ0XL","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?85df606204b9d08c7ff41bedceef09f7"></script>
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="唐李锦的空间" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">唐李锦的空间</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">64</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">16</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">69</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li><li class="menu-item menu-item-友情链接"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友情链接</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container">
+  <div class="algolia-stats"><hr></div>
+  <div class="algolia-hits"></div>
+  <div class="algolia-pagination"></div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D-JS-%E6%9C%89%E5%93%AA%E4%BA%9B%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">介绍 JS 有哪些内置对象？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%9C%80%E5%B0%8F%E5%8C%96%E9%87%8D%E7%BB%98-repaint-%E5%92%8C%E5%9B%9E%E6%B5%81-reflow-%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">如何最小化重绘(repaint)和回流(reflow)？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Javascript-%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE"><span class="nav-number">3.</span> <span class="nav-text">Javascript 作用域链?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82"><span class="nav-number">4.</span> <span class="nav-text">数据请求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%A8%E5%9F%9F%E5%92%8C%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5"><span class="nav-number">5.</span> <span class="nav-text">跨域和同源策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="nav-number">6.</span> <span class="nav-text">面向对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AD%E5%8C%85"><span class="nav-number">7.</span> <span class="nav-text">闭包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D"><span class="nav-number">8.</span> <span class="nav-text">数组去重</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E5%90%88%E5%B9%B6"><span class="nav-number">9.</span> <span class="nav-text">数组合并</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cookie-%E5%92%8C-session-%EF%BC%88%E7%99%BB%E5%BD%95%E9%89%B4%E6%9D%83%E6%98%AF%E6%80%8E%E4%B9%88%E5%81%9A%E7%9A%84%EF%BC%89"><span class="nav-number">10.</span> <span class="nav-text">cookie 和 session （登录鉴权是怎么做的）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E5%92%8C%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">11.</span> <span class="nav-text">线程和进程的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98%E5%92%8C%E5%BC%BA%E7%BC%93%E5%AD%98%E5%8C%BA%E5%88%AB"><span class="nav-number">12.</span> <span class="nav-text">协商缓存和强缓存区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http-%E5%92%8C-https"><span class="nav-number">13.</span> <span class="nav-text">http 和 https</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8E%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98%E4%BD%A0%E6%98%AF%E6%80%8E%E4%B9%88%E8%A7%A3%E5%86%B3%E7%9A%84"><span class="nav-number">14.</span> <span class="nav-text">对于工作中的跨域问题你是怎么解决的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF"><span class="nav-number">15.</span> <span class="nav-text">事件循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AE%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1"><span class="nav-number">16.</span> <span class="nav-text">微任务和宏任务</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="唐李锦"
+      src="/downloads/images/avatar.png">
+  <p class="site-author-name" itemprop="name">唐李锦</p>
+  <div class="site-description" itemprop="description">我的名字叫唐李锦，这是我的空间。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">69</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">64</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="/downloads/images/wechat.png" title="微信 → &#x2F;downloads&#x2F;images&#x2F;wechat.png" rel="noopener me"><i class="fa fa-comments fa-fw"></i>微信</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/ljtang2009" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ljtang2009" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:ho_ho_gl@hotmail.com" title="E-Mail → mailto:ho_ho_gl@hotmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.tanglijin.top/2023/06/interview-fontend-js/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/downloads/images/avatar.png">
+      <meta itemprop="name" content="唐李锦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="唐李锦的空间">
+      <meta itemprop="description" content="我的名字叫唐李锦，这是我的空间。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="面试题 - 前端 - JS | 唐李锦的空间">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          面试题 - 前端 - JS
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-06-30 10:51:00" itemprop="dateCreated datePublished" datetime="2023-06-30T10:51:00+08:00">2023-06-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-07-08 18:01:51" itemprop="dateModified" datetime="2023-07-08T18:01:51+08:00">2023-07-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98-%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">面试题-前端</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="介绍-JS-有哪些内置对象？"><a href="#介绍-JS-有哪些内置对象？" class="headerlink" title="介绍 JS 有哪些内置对象？"></a>介绍 JS 有哪些内置对象？</h2><ul>
+<li>数据封装类对象(可以 new 的)：Object、Array、Boolean、Number、String</li>
+<li>其他对象：Function、Arguments、Math、Date、RegExp、Error</li>
+<li>ES6 新增对象：Symbol（标识唯一性的 ID）、Map、Set、Promises、Proxy、Reflect<span id="more"></span></li>
+</ul>
+<h2 id="如何最小化重绘-repaint-和回流-reflow-？"><a href="#如何最小化重绘-repaint-和回流-reflow-？" class="headerlink" title="如何最小化重绘(repaint)和回流(reflow)？"></a>如何最小化重绘(repaint)和回流(reflow)？</h2><ul>
+<li>需要要对元素进行复杂的操作时，可以先隐藏(display:”none”)，操作完成后再显示</li>
+<li>需要创建多个 DOM 节点时，使用 document.createDocumentFragment 创建完后一次性的加入 document</li>
+<li>缓存 Layout 属性值，如：var left &#x3D; elem.offsetLeft; 这样，多次使用 left 只产生一次回流</li>
+<li>尽量避免用 table 布局（table 元素一旦触发回流就会导致 table 里所有的其它元素回流）</li>
+</ul>
+<h2 id="Javascript-作用域链"><a href="#Javascript-作用域链" class="headerlink" title="Javascript 作用域链?"></a>Javascript 作用域链?</h2><ul>
+<li>全局函数无法查看局部函数的内部细节，但局部函数可以查看其上层的函数细节，直至全局细节</li>
+<li>如果当前作用域没有找到属性或方法，会向上层作用域[[Scoped]]查找，直至全局函数，这种形式就是作用域链</li>
+</ul>
+<blockquote>
+<p>例如一个函数需要使用一个属性，如果在当前函数作用域找不到这个属性，则会到更上一级的函数作用域去找，直至全局函数。这种形式就是作用域链。</p>
+</blockquote>
+<h2 id="数据请求"><a href="#数据请求" class="headerlink" title="数据请求"></a>数据请求</h2><p>方法一：fetch</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">fetch</span>(<span class="string">&#x27;url&#x27;</span>, &#123; <span class="attr">method</span>: <span class="string">&#x27;post&#x27;</span>, <span class="attr">body</span>: <span class="string">&#x27;&#x27;</span>, <span class="attr">credencial</span>: <span class="string">&#x27;include&#x27;</span> &#125;)</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> res.<span class="title function_">json</span>())</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(res);</span><br><span class="line">  &#125;);</span><br><span class="line"><span class="comment">// 兼容性问题，如果要兼容老浏览器，则需要用polyfill</span></span><br><span class="line"><span class="comment">// 发出的请求，默认是不带cookie.  credencial:&#x27;include&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>方法二：XHR</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>();</span><br><span class="line">xhr.<span class="title function_">open</span>(<span class="string">&#x27;get&#x27;</span>,<span class="string">&quot;www.aaaa.com&quot;</span>,<span class="literal">true</span>);<span class="comment">//异步</span></span><br><span class="line">xhr.<span class="title function_">send</span>();</span><br><span class="line">xhr.<span class="property">onreadystatechange</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="comment">// readstate  4</span></span><br><span class="line">    <span class="comment">// status  200-300</span></span><br><span class="line">    <span class="comment">// 200 成功 （有可能强缓存策略，cache-control,expired）</span></span><br><span class="line">    <span class="comment">// 301 302 redirect</span></span><br><span class="line">    <span class="comment">// 304 从缓存读取数据。(协商缓存策略,etag)</span></span><br><span class="line">    <span class="comment">// 404 not found</span></span><br><span class="line">    <span class="comment">// 500 服务器错误。</span></span><br><span class="line">&#125;</span><br><span class="line">  xhr 可以取消？</span><br><span class="line">  xhr.<span class="title function_">abort</span>();<span class="comment">//终止请求。</span></span><br></pre></td></tr></table></figure>
+
+<p>方法三：jsonp<br><span id="jsonp"></span></p>
+<blockquote>
+<p>jsonp 的原理是 用 script 标签应用 JS 文件不受跨域限制。<br>所以前端动态创建 script 标签指向服务端接口。<br>服务端返回的数据格式是<code>test(&#39;[&quot;111&quot;,&quot;222&quot;,&quot;3333&quot;]&#39;);</code>。<br>前端定义好<code>test</code>这个方法接收数据。<br>jsonp 只能做 get 请求，不可以中断。</p>
+</blockquote>
+<h2 id="跨域和同源策略"><a href="#跨域和同源策略" class="headerlink" title="跨域和同源策略"></a>跨域和同源策略</h2><p>所谓的同源策略其实是浏览器的一种机制，只允许在同源，也就是同协议、同域名、同端口的的情况下才能进行数据交互。 但是我们在开发项目的过程中， 往往一个项目的接口不止一个域，所以往往就需要做跨域的处理，通常的跨域方式有这么几种：</p>
+<p>方法一：jsonp</p>
+<p><a href="#jsonp">详细说明</a></p>
+<p>方法二：CORS，依赖服务端对前端的请求头信息进行放行，不做限制。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Access</span>-<span class="title class_">Control</span>-<span class="title class_">Allow</span>-<span class="title class_">Origin</span>配置成*</span><br></pre></td></tr></table></figure>
+
+<p>方法三：前端在开发阶段，可以使用代理服务器去访问目标服务器。</p>
+<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>(1)构造函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Test</span>(<span class="params">name, age</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">age</span> = age;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">getName</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">name</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Test();</span></span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="title class_">Test</span>(<span class="string">&#x27;kerwin&#x27;</span>, <span class="number">100</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj2 = <span class="keyword">new</span> <span class="title class_">Test</span>(<span class="string">&#x27;xiaoming&#x27;</span>, <span class="number">18</span>);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>人话：在一个函数内部，写好了 this 挂上属性。外面再 new 这个函数，就可以创建出实例对象出来。</p>
+</blockquote>
+<p>(2)原型</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//内存只有一份</span></span><br><span class="line"><span class="title class_">Test</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">getName</span>= <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//缺点是？</span></span><br><span class="line"></span><br><span class="line">原型容易被覆盖</span><br><span class="line"></span><br><span class="line"><span class="title class_">Array</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">concat</span> = ....</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>人话：原型的目的是共享内存。<br>每个对象的属性和方法在内存中都是独立的。如果某些属性或方法<strong>不需要</strong>各个对象内存独立，则可以使用原型。使用原型就可以使同一个构造函数创建出来的所有对象有共同的属性或方法。例如所有的数组都有 concat 方法。<br>原型容易被覆盖，例如 vue 中覆盖了数组原型中的操作方法（例如 push，pop，splice），使得数组调用这些方法后，有响应式效果。</p>
+</blockquote>
+<p>(3)继承</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//构造函数继承</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Test2</span>(<span class="params">name, age, location</span>) &#123;</span><br><span class="line">  <span class="comment">// this.name =name;</span></span><br><span class="line">  <span class="comment">// this.age =age;</span></span><br><span class="line">  <span class="comment">// Test.call(this,name,age);</span></span><br><span class="line">  <span class="title class_">Test</span>.<span class="title function_">apply</span>(<span class="variable language_">this</span>, [name, age]);</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">location</span> = location;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="title class_">Test2</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">//原型继承</span></span><br><span class="line"><span class="title class_">Test2</span>.<span class="property"><span class="keyword">prototype</span></span> = <span class="title class_">Test</span>.<span class="property"><span class="keyword">prototype</span></span>;</span><br><span class="line"><span class="comment">//Test2.prototype =new Test()</span></span><br><span class="line"><span class="title class_">Test2</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">constructor</span> = <span class="title class_">Test2</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//混合继承</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>人话：有两种继承方式：<br>方法一：构造函数继承。在子构造函数中使用 call 或者 apply，把父构造函数的属性都继承过来。这个方法的缺点是无法继承父构造函数的原型。<br>方法二：原型继承。子构造函数的原型覆盖为父构造函数的原型。</p>
+</blockquote>
+<p>(4)原型链</p>
+<p>原型链的基本原理：任何一个实例，通过原型链，找到它上面的原型，该原型对象中的方法和属性，可以被所有的原型实例共享。</p>
+<blockquote>
+<p>人话：如果一个对象<code>obj</code>访问一个属性<code>a</code>，会先找对象本身有没有属性<code>a</code>。如果没有，就会通过<code>obj.__proto__</code>找到创建<code>obj</code>的构造函数的<code>prototype</code>，在这上面找属性<code>a</code>。如果还没有找到，就继续沿着上一级继续找，直到找到原型的顶点<code>Object</code>。如果在没有找到就报错了。</p>
+</blockquote>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>函数内部返回另一个函数。另一个函数被外界引用。垃圾回收机制无法回收。这就是 js 的一个特性：闭包。</p>
+<p>目的：实现数据持久化，并私有，但会有内存泄露风险。例如做一个计数函数，调用一次，计数器++。</p>
+<p>计数器实例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">fn</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> num = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">func</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    num++;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(num);</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> func;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> fn1 = <span class="title function_">fn</span>();</span><br></pre></td></tr></table></figure>
+
+<p>实际应用：模块化，防抖，截流。</p>
+<p>模块化实例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">MyModule</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">increment</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    count++;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">reset</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    count = <span class="number">0</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">getCount</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> count;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    increment,</span><br><span class="line">    reset,</span><br><span class="line">    getCount,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> myModule = <span class="title class_">MyModule</span>();</span><br><span class="line">myModule.<span class="title function_">increment</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(myModule.<span class="title function_">getCount</span>()); <span class="comment">// 输出1</span></span><br><span class="line">myModule.<span class="title function_">reset</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(myModule.<span class="title function_">getCount</span>()); <span class="comment">// 输出0</span></span><br></pre></td></tr></table></figure>
+
+<p>防抖实例：(先延迟，后执行，例如文本框输入，自动搜索)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">debounce</span>(<span class="params">fn, wait</span>) &#123;</span><br><span class="line">  <span class="comment">// 定时器，每次执行防抖函数都会清除旧的定时器，设置新的定时器。</span></span><br><span class="line">  <span class="comment">// 这样在wait时间内，所有目标函数只有最后一次被执行。</span></span><br><span class="line">  <span class="keyword">let</span> timeoutId;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params">...args</span>) &#123;</span><br><span class="line">    <span class="built_in">clearTimeout</span>(timeoutId);</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, args);</span><br><span class="line">    &#125;, wait);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>截流实例：（先执行，后延迟，例如点击按钮）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">throttle</span>(<span class="params">fn, wait</span>) &#123;</span><br><span class="line">  <span class="comment">// 标记是否为截流状态。如果不是截流状态，则立即执行目标函数，并设置截流状态。</span></span><br><span class="line">  <span class="comment">// 这样在wait时间内，所有目标函数只有第一次被执行。</span></span><br><span class="line">  <span class="keyword">let</span> isThrottled = <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params">...args</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!isThrottled) &#123;</span><br><span class="line">      isThrottled = <span class="literal">true</span>;</span><br><span class="line">      fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, args);</span><br><span class="line">      <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        isThrottled = <span class="literal">false</span>;</span><br><span class="line">      &#125;, wait);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h2><p>方法一：利用 Set 去重</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myset = <span class="keyword">new</span> <span class="title class_">Set</span>(arr); <span class="comment">// set会把重复的元素提掉</span></span><br><span class="line"><span class="keyword">var</span> mya = <span class="title class_">Array</span>.<span class="title function_">from</span>(myset);</span><br></pre></td></tr></table></figure>
+
+<p>方法二：利用 for 嵌套 for，然后 splice 去重</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">unique</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> j = i + <span class="number">1</span>; j &lt; arr.<span class="property">length</span>; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr[i] === arr[j]) &#123;</span><br><span class="line">        <span class="comment">//第一个等同于第二个，splice方法删除第二个</span></span><br><span class="line">        arr.<span class="title function_">splice</span>(j, <span class="number">1</span>);</span><br><span class="line">        j--;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> arr = [</span><br><span class="line">  <span class="number">1</span>,</span><br><span class="line">  <span class="number">1</span>,</span><br><span class="line">  <span class="string">&#x27;true&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;true&#x27;</span>,</span><br><span class="line">  <span class="literal">true</span>,</span><br><span class="line">  <span class="literal">true</span>,</span><br><span class="line">  <span class="number">15</span>,</span><br><span class="line">  <span class="number">15</span>,</span><br><span class="line">  <span class="literal">false</span>,</span><br><span class="line">  <span class="literal">false</span>,</span><br><span class="line">  <span class="literal">undefined</span>,</span><br><span class="line">  <span class="literal">undefined</span>,</span><br><span class="line">  <span class="literal">null</span>,</span><br><span class="line">  <span class="literal">null</span>,</span><br><span class="line">  <span class="title class_">NaN</span>,</span><br><span class="line">  <span class="title class_">NaN</span>,</span><br><span class="line">  <span class="string">&#x27;NaN&#x27;</span>,</span><br><span class="line">  <span class="number">0</span>,</span><br><span class="line">  <span class="number">0</span>,</span><br><span class="line">  <span class="string">&#x27;a&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;a&#x27;</span>,</span><br><span class="line">  &#123;&#125;,</span><br><span class="line">  &#123;&#125;,</span><br><span class="line">];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">unique</span>(arr));</span><br><span class="line"><span class="comment">//[1,&quot;true&quot;,true,15,false,undefined,null,NaN,NaN,&quot;NaN&quot;,0,&quot;a&quot;,&#123;&#125;,&#123;&#125;]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="数组合并"><a href="#数组合并" class="headerlink" title="数组合并"></a>数组合并</h2><ul>
+<li>concat</li>
+<li>[…a, …b]展开运算符</li>
+<li>[a, b].flat()</li>
+</ul>
+<h2 id="cookie-和-session-（登录鉴权是怎么做的）"><a href="#cookie-和-session-（登录鉴权是怎么做的）" class="headerlink" title="cookie 和 session （登录鉴权是怎么做的）"></a>cookie 和 session （登录鉴权是怎么做的）</h2><p>传统的 cookie 验证(有 Cookie 被盗用风险)：</p>
+<p><img src="/2023/06/interview-fontend-js/cookie%E5%92%8Csession%E9%89%B4%E6%9D%83-%E4%BC%A0%E7%BB%9Fcookie%E9%AA%8C%E8%AF%81.drawio.png" alt="传统的cookie验证"></p>
+<p>session 验证：</p>
+<p><img src="/2023/06/interview-fontend-js/cookie%E5%92%8Csession%E9%89%B4%E6%9D%83-session%E9%AA%8C%E8%AF%81.drawio.png" alt="session验证"></p>
+<h2 id="线程和进程的区别"><a href="#线程和进程的区别" class="headerlink" title="线程和进程的区别"></a>线程和进程的区别</h2><p>进程是资源分配的最小单元，线程是代码执行的最小单元。</p>
+<p>一个应用程序可能会开启多个进程，进程之间数据不共享，一个进程内部可以开启多个线程，线程之间的数据可以共享的，所以多线程的情况下，往往要考虑的是线程间的执行顺序问题。</p>
+<p>浏览器其实也可以通过 webWorkers 开启多线程。</p>
+<h2 id="协商缓存和强缓存区别"><a href="#协商缓存和强缓存区别" class="headerlink" title="协商缓存和强缓存区别"></a>协商缓存和强缓存区别</h2><p>强缓存不走服务器，协商缓存服务器返回 304 状态码。</p>
+<p><img src="/2023/06/interview-fontend-js/cookie%E5%92%8Csession%E9%89%B4%E6%9D%83-%E7%BC%93%E5%AD%98.drawio.png" alt="协商缓存和强缓存区别"></p>
+<h2 id="http-和-https"><a href="#http-和-https" class="headerlink" title="http 和 https"></a>http 和 https</h2><p>HTTP 是明文传输，数据容易被网络中间节点偷窥或篡改。例如有些网络提供商会在用户浏览的网页中输入广告，就是篡改了网页文件。<br>HTTP 使用 80 端口。</p>
+<p>HTTPS 是加密传输。流程如下：</p>
+<ol>
+<li>客户端向服务端发送握手信息；</li>
+<li>服务端会将 SSL 证书（包含加密公钥，签发的 CA 机构）发送给客户端；</li>
+<li>客户端检查签发的 CA 机构是否值得信任。如果检查通过就用证书中的加密公钥加密要传输的数据（该数据无法用公钥解密，应为非对称加密）给服务端。</li>
+<li>服务端拿到客户端的加密数据后，用与公钥配对的私钥解密。<br>HTTPS 使用 443 端口。</li>
+</ol>
+<p>HTTPS 也不一定安全。SSL 证书是由 CA 机构审核签发的，如果 CA 机构没有做好审核，就把 SSL 证书签发给了坏家伙，那 HTTPS 也不安全了。</p>
+<h2 id="对于工作中的跨域问题你是怎么解决的"><a href="#对于工作中的跨域问题你是怎么解决的" class="headerlink" title="对于工作中的跨域问题你是怎么解决的"></a>对于工作中的跨域问题你是怎么解决的</h2><p>在本地开发的过程中，本地服务器访问测试服务器接口的，也基本都是后端去处理 CORS 跨域，但是有些时候也可能需要前端在脚手架对应的 devServer 中配置 Proxy 来进行开发时候的跨域处理。</p>
+<p>在线上的各种环境中（开发、测试、生产）环境一般是不会有跨域问题的，因为服务器和前端资源一般是会部署在同一个域的服务器下的，但是也有端口或者不同域的情况，这些时候往往都是后端去利用 CORS 来处理的跨域问题。</p>
+<p>在一些极少的情况下加，项目中可能会访问一些第三方的 Api，比如定位、天气等等接口的时候，可能会根据接口需求进行 jsonp 的跨域处理。</p>
+<h2 id="事件循环"><a href="#事件循环" class="headerlink" title="事件循环"></a>事件循环</h2><p>同步代码（同步任务）：<strong>立即</strong>放到<strong>JS引擎</strong>（JS主线程）执行，并<strong>原地等待</strong>结果。</p>
+<p>异步代码（异步任务）：先放入<strong>宿主环境</strong>（浏览器&#x2F;Node），不必原地等待结果，并<strong>不阻塞</strong>主线程继续往下执行，异步结果在<strong>将来执行</strong>。</p>
+<p>异步代码有：</p>
+<ul>
+<li>定时器</li>
+<li>Ajax请求</li>
+<li>UI事件</li>
+<li>Promise的then（Promise本身是同步的）</li>
+</ul>
+<iframe src="//player.bilibili.com/player.html?aid=360659668&bvid=BV1QX4y1H7uB&cid=1187954658&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<p>总结：</p>
+<ol>
+<li>JS是单线程，为防止代码阻塞，把代码（任务）分成：同步和异步。</li>
+<li>同步代码给JS引擎执行，异步代码交给宿主环境。</li>
+<li>同步代码放入执行栈中，异步代码等待时机成熟送入任务队列排队。</li>
+<li>执行栈执行完毕，会去任务队列看是否有异步任务，有就送到执行栈执行。反复循环查看执行，这个过程就是事件循环。</li>
+</ol>
+<h2 id="微任务和宏任务"><a href="#微任务和宏任务" class="headerlink" title="微任务和宏任务"></a>微任务和宏任务</h2><p>JS把<strong>异步任务</strong>分为宏任务和微任务。</p>
+<p>宏任务是由宿主（浏览器、Node）发起：script全部代码、setTimeout、setInterval、网络请求（Ajax&#x2F;Fetch）、事件。</p>
+<p>微任务是由JS引擎发起：Promise、Process.nextTick（Node独有）。</p>
+<blockquote>
+<p>Promise本身同步，then&#x2F;catch的回调函数时异步的。</p>
+</blockquote>
+<iframe src="//player.bilibili.com/player.html?aid=360687675&bvid=BV1FX4y1p7v1&cid=1189497305&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<p>总结：</p>
+<ol>
+<li>同步代码放到执行栈中；微任务的回调函数在时机成熟时，放到微任务队列中；宏任务的回调函数在时机成熟时，放到宏任务队列中。</li>
+<li>执行在执行栈中的同步代码。</li>
+<li>到微任务队列中找微任务，放到执行栈中执行。直至微任务队列中没有微任务。</li>
+<li>到宏任务队列中找宏任务，放到执行栈中执行。直至宏任务队列中没有宏任务。</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.jsv9000.app/">事件循环-微任务宏任务-练习网站</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/downloads/images/reward/wechatpay.png" alt="唐李锦 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/downloads/images/reward/alipay.png" alt="唐李锦 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>唐李锦
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.tanglijin.top/2023/06/interview-fontend-js/" title="面试题 - 前端 - JS">https://www.tanglijin.top/2023/06/interview-fontend-js/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/" rel="tag"><i class="fa fa-tag"></i> 面试题</a>
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+              <a href="/tags/JS/" rel="tag"><i class="fa fa-tag"></i> JS</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/06/interview-fontend-css/" rel="prev" title="面试题 - 前端 - CSS">
+                  <i class="fa fa-chevron-left"></i> 面试题 - 前端 - CSS
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2022 – 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">唐李锦</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/4.17.1/algoliasearch-lite.umd.js" integrity="sha256-F7emIId74fYoGrHzsnu3iClRHIbBMhMCbxDoA1cfMAY=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.56.1/instantsearch.production.min.js" integrity="sha256-lz9C+x8+6w2rh56x5TrH5iYmE4Js2FiJS5h0tuMz7hQ=" crossorigin="anonymous"></script><script src="/js/third-party/search/algolia-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"ljtang2009/blog","issue_term":"pathname","theme":"preferred-color-scheme","label":"Utteranc"}</script>
+<script src="/js/third-party/comments/utterances.js"></script>
+
+</body>
+</html>

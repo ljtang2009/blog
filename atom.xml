@@ -6,7 +6,7 @@
   <link href="https://www.tanglijin.top/atom.xml" rel="self"/>
   
   <link href="https://www.tanglijin.top/"/>
-  <updated>2023-06-07T04:24:01.273Z</updated>
+  <updated>2023-07-08T10:01:51.410Z</updated>
   <id>https://www.tanglijin.top/</id>
   
   <author>
@@ -15,6 +15,120 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>面试题 - 前端 - JS</title>
+    <link href="https://www.tanglijin.top/2023/06/interview-fontend-js/"/>
+    <id>https://www.tanglijin.top/2023/06/interview-fontend-js/</id>
+    <published>2023-06-30T02:51:00.000Z</published>
+    <updated>2023-07-08T10:01:51.410Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;介绍-JS-有哪些内置对象？&quot;&gt;&lt;a href=&quot;#介绍-JS-有哪些内置对象？&quot; class=&quot;headerlink&quot; title=&quot;介绍 JS 有哪些内置对象？&quot;&gt;&lt;/a&gt;介绍 JS 有哪些内置对象？&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;数据封装类对象(可以 new 的)：Object、Array、Boolean、Number、String&lt;/li&gt;
+&lt;li&gt;其他对象：Function、Arguments、Math、Date、RegExp、Error&lt;/li&gt;
+&lt;li&gt;ES6 新增对象：Symbol（标识唯一性的 ID）、Map、Set、Promises、Proxy、Reflect</summary>
+    
+    
+    
+    <category term="面试题-前端" scheme="https://www.tanglijin.top/categories/%E9%9D%A2%E8%AF%95%E9%A2%98-%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="面试题" scheme="https://www.tanglijin.top/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    <category term="前端" scheme="https://www.tanglijin.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="JS" scheme="https://www.tanglijin.top/tags/JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试题 - 前端 - CSS</title>
+    <link href="https://www.tanglijin.top/2023/06/interview-fontend-css/"/>
+    <id>https://www.tanglijin.top/2023/06/interview-fontend-css/</id>
+    <published>2023-06-25T10:32:00.000Z</published>
+    <updated>2023-06-30T02:47:16.189Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;display-none-与-visibility-hidden-的区别&quot;&gt;&lt;a href=&quot;#display-none-与-visibility-hidden-的区别&quot; class=&quot;headerlink&quot; title=&quot;display: none; 与 visibility: hidden; 的区别 ?&quot;&gt;&lt;/a&gt;display: none; 与 visibility: hidden; 的区别 ?&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;联系：它们都能让元素不可见&lt;/li&gt;
+&lt;li&gt;区别：&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;display:none&lt;/code&gt;;会让元素完全从渲染树中消失，渲染的时候不占据任何空间；&lt;code&gt;visibility: hidden&lt;/code&gt;;不会让元素从渲染树消失，渲染师元素继续占据空间，只是内容不可见&lt;/li&gt;
+&lt;li&gt;修改常规流中元素的&lt;code&gt;display&lt;/code&gt;通常会造成文档重排。修改&lt;code&gt;visibility&lt;/code&gt;属性只会造成本元素的重绘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="面试题-前端" scheme="https://www.tanglijin.top/categories/%E9%9D%A2%E8%AF%95%E9%A2%98-%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="面试题" scheme="https://www.tanglijin.top/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    <category term="前端" scheme="https://www.tanglijin.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="CSS" scheme="https://www.tanglijin.top/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试题 - 前端 - HTML5</title>
+    <link href="https://www.tanglijin.top/2023/06/interview-fontend-html5/"/>
+    <id>https://www.tanglijin.top/2023/06/interview-fontend-html5/</id>
+    <published>2023-06-25T08:58:00.000Z</published>
+    <updated>2023-06-25T10:32:17.343Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;HTML5-有哪些新特性？&quot;&gt;&lt;a href=&quot;#HTML5-有哪些新特性？&quot; class=&quot;headerlink&quot; title=&quot;HTML5 有哪些新特性？&quot;&gt;&lt;/a&gt;HTML5 有哪些新特性？&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;增强多媒体功能：video,audio 元素。&lt;/li&gt;
+&lt;li&gt;新增本地存储：localStorage, SessionStorage。&lt;/li&gt;
+&lt;li&gt;语义化标签：header,article,footer 等。**&lt;em&gt;伴随提问：&lt;/em&gt;**&lt;a href=&quot;#%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3HTML5%E7%BB%93%E6%9E%84%E8%AF%AD%E4%B9%89%E5%8C%96%EF%BC%9F&quot;&gt;如何理解 HTML5 结构语义化？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;新增表单控件：date, time, email 等。写法是 &lt;code&gt;&amp;lt;input type=&amp;quot;date&amp;quot; /&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;新增位置，多任务等功能：GeoLocation，webWorker。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;如何理解-HTML5-结构语义化？&quot;&gt;&lt;a href=&quot;#如何理解-HTML5-结构语义化？&quot; class=&quot;headerlink&quot; title=&quot;如何理解 HTML5 结构语义化？&quot;&gt;&lt;/a&gt;如何理解 HTML5 结构语义化？&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="面试题-前端" scheme="https://www.tanglijin.top/categories/%E9%9D%A2%E8%AF%95%E9%A2%98-%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="面试题" scheme="https://www.tanglijin.top/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    <category term="前端" scheme="https://www.tanglijin.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="HTML5" scheme="https://www.tanglijin.top/tags/HTML5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker 学习 11. 多级构建</title>
+    <link href="https://www.tanglijin.top/2023/06/docker-study-11/"/>
+    <id>https://www.tanglijin.top/2023/06/docker-study-11/</id>
+    <published>2023-06-12T00:07:00.000Z</published>
+    <updated>2023-06-12T00:07:44.614Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;details class=&quot;note info no-icon&quot;&gt;&lt;summary&gt;&lt;p&gt;目录&lt;/p&gt;
+&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-1/&quot; title=&quot;Docker 学习 1.</summary>
+        
+      
+    
+    
+    
+    <category term="Docker 学习" scheme="https://www.tanglijin.top/categories/Docker-%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Docker" scheme="https://www.tanglijin.top/tags/Docker/"/>
+    
+  </entry>
   
   <entry>
     <title>VSCode 功能推荐 - 对多目录搜索包含和排除目录</title>
@@ -139,7 +253,7 @@
     <link href="https://www.tanglijin.top/2023/05/docker-study-10/"/>
     <id>https://www.tanglijin.top/2023/05/docker-study-10/</id>
     <published>2023-05-13T12:33:00.000Z</published>
-    <updated>2023-06-07T04:24:01.250Z</updated>
+    <updated>2023-06-12T00:06:08.475Z</updated>
     
     
       
@@ -508,137 +622,6 @@
     
     
     <category term="Docker" scheme="https://www.tanglijin.top/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker 学习 2. 常用命令</title>
-    <link href="https://www.tanglijin.top/2023/03/docker-study-2/"/>
-    <id>https://www.tanglijin.top/2023/03/docker-study-2/</id>
-    <published>2023-03-17T12:31:00.000Z</published>
-    <updated>2023-06-07T04:24:01.249Z</updated>
-    
-    
-    <summary type="html">&lt;details class=&quot;note info no-icon&quot;&gt;&lt;summary&gt;&lt;p&gt;目录&lt;/p&gt;
-&lt;/summary&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-1/&quot; title=&quot;Docker 学习 1. 原理&quot;&gt;Docker 学习 1. 原理&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-2/&quot; title=&quot;Docker 学习 2. 常用命令&quot;&gt;Docker 学习 2. 常用命令&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-3/&quot; title=&quot;Docker 学习 3. 编写 Dockerfile&quot;&gt;Docker 学习 3. 编写 Dockerfile&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-4/&quot; title=&quot;Docker 学习 4. Docker引擎架构&quot;&gt;Docker 学习 4. Docker引擎架构&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-5/&quot; title=&quot;Docker 学习 5. 容器退出命令&quot;&gt;Docker 学习 5. 容器退出命令&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-6/&quot; title=&quot;Docker 学习 6. 镜像导入导出和容器导入导出的区别&quot;&gt;Docker 学习 6. 镜像导入导出和容器导入导出的区别&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-7/&quot; title=&quot;Docker 学习 7. Docker Cache&quot;&gt;Docker 学习 7. Docker Cache&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-8/&quot; title=&quot;Docker 学习 8. 数据卷持久化&quot;&gt;Docker 学习 8. 数据卷持久化&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-9/&quot; title=&quot;Docker 学习 9. Docker 本地网络&quot;&gt;Docker 学习 9. Docker 本地网络&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/details&gt;
-
-
-&lt;h2 id=&quot;查看-Docker-版本&quot;&gt;&lt;a href=&quot;#查看-Docker-版本&quot; class=&quot;headerlink&quot; title=&quot;查看 Docker 版本&quot;&gt;&lt;/a&gt;查看 Docker 版本&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;docker version&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;查看-Docker-详细信息&quot;&gt;&lt;a href=&quot;#查看-Docker-详细信息&quot; class=&quot;headerlink&quot; title=&quot;查看 Docker 详细信息&quot;&gt;&lt;/a&gt;查看 Docker 详细信息&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;docker info&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 或者查看某项信息&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;docker info |grep Root&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="Docker 学习" scheme="https://www.tanglijin.top/categories/Docker-%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="Docker" scheme="https://www.tanglijin.top/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker 学习 1. 原理</title>
-    <link href="https://www.tanglijin.top/2023/03/docker-study-1/"/>
-    <id>https://www.tanglijin.top/2023/03/docker-study-1/</id>
-    <published>2023-03-17T00:07:00.000Z</published>
-    <updated>2023-06-07T04:24:01.249Z</updated>
-    
-    
-    <summary type="html">&lt;details class=&quot;note info no-icon&quot;&gt;&lt;summary&gt;&lt;p&gt;目录&lt;/p&gt;
-&lt;/summary&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-1/&quot; title=&quot;Docker 学习 1. 原理&quot;&gt;Docker 学习 1. 原理&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-2/&quot; title=&quot;Docker 学习 2. 常用命令&quot;&gt;Docker 学习 2. 常用命令&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-3/&quot; title=&quot;Docker 学习 3. 编写 Dockerfile&quot;&gt;Docker 学习 3. 编写 Dockerfile&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-4/&quot; title=&quot;Docker 学习 4. Docker引擎架构&quot;&gt;Docker 学习 4. Docker引擎架构&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-5/&quot; title=&quot;Docker 学习 5. 容器退出命令&quot;&gt;Docker 学习 5. 容器退出命令&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-6/&quot; title=&quot;Docker 学习 6. 镜像导入导出和容器导入导出的区别&quot;&gt;Docker 学习 6. 镜像导入导出和容器导入导出的区别&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-7/&quot; title=&quot;Docker 学习 7. Docker Cache&quot;&gt;Docker 学习 7. Docker Cache&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-8/&quot; title=&quot;Docker 学习 8. 数据卷持久化&quot;&gt;Docker 学习 8. 数据卷持久化&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-9/&quot; title=&quot;Docker 学习 9. Docker 本地网络&quot;&gt;Docker 学习 9. Docker 本地网络&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/details&gt;
-
-
-&lt;h2 id=&quot;为什么会有-Docker&quot;&gt;&lt;a href=&quot;#为什么会有-Docker&quot; class=&quot;headerlink&quot; title=&quot;为什么会有 Docker ?&quot;&gt;&lt;/a&gt;为什么会有 Docker ?&lt;/h2&gt;&lt;p&gt;在 Docker 出现之前，如果要实现在一台电脑上同时运行多系统，需要使用虚拟机，例如 VMware。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Docker 学习" scheme="https://www.tanglijin.top/categories/Docker-%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="Docker" scheme="https://www.tanglijin.top/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux 常用命令</title>
-    <link href="https://www.tanglijin.top/2023/02/linux-command/"/>
-    <id>https://www.tanglijin.top/2023/02/linux-command/</id>
-    <published>2023-02-24T03:38:00.000Z</published>
-    <updated>2023-06-07T04:24:01.245Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;版本&quot;&gt;&lt;a href=&quot;#版本&quot; class=&quot;headerlink&quot; title=&quot;版本&quot;&gt;&lt;/a&gt;版本&lt;/h2&gt;&lt;h3 id=&quot;内核版本&quot;&gt;&lt;a href=&quot;#内核版本&quot; class=&quot;headerlink&quot; title=&quot;内核版本&quot;&gt;&lt;/a&gt;内核版本&lt;/h3&gt;&lt;p&gt;&lt;code&gt;cat /proc/version&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;uname -a&lt;/code&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="技术积累" scheme="https://www.tanglijin.top/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/"/>
-    
-    
-    <category term="Linux" scheme="https://www.tanglijin.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WSL 常用命令</title>
-    <link href="https://www.tanglijin.top/2023/02/wsl-command/"/>
-    <id>https://www.tanglijin.top/2023/02/wsl-command/</id>
-    <published>2023-02-23T08:04:00.000Z</published>
-    <updated>2023-06-07T04:24:01.249Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;WSL-常用命令&quot;&gt;&lt;a href=&quot;#WSL-常用命令&quot; class=&quot;headerlink&quot; title=&quot;WSL 常用命令&quot;&gt;&lt;/a&gt;WSL 常用命令&lt;/h2&gt;&lt;h3 id=&quot;安装-WSL&quot;&gt;&lt;a href=&quot;#安装-WSL&quot; class=&quot;headerlink&quot; title=&quot;安装 WSL&quot;&gt;&lt;/a&gt;安装 WSL&lt;/h3&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;wsl --install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="技术积累" scheme="https://www.tanglijin.top/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/"/>
-    
-    
-    <category term="WSL" scheme="https://www.tanglijin.top/tags/WSL/"/>
     
   </entry>
   
