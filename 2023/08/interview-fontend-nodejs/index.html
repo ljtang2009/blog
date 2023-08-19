@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/downloads/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/downloads/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/downloads/images/favicon/favicon-16x16.png">
+  <link rel="mask-icon" href="/downloads/images/favicon/favicon.svg" color="#222">
+  <meta name="google-site-verification" content="_2OctYreBeDkfTRiEHaXwB0wYaMK6F84qG97fNjM4qc">
+  <meta name="msvalidate.01" content="84BDF5B17B36630CC4297E351B2B0D64">
+  <meta name="baidu-site-verification" content="code-kuUu52WEwj">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.tanglijin.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"style":"flat","show_result":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":true,"nav":{"utterances":{"order":-1},"changyan":{"text":"畅言","order":0},"livere":{"text":"来必力","order":1},"valine":{"order":2},"disqus":{"order":3},"disqusjs":{"order":4},"gitalk":{"order":5},"giscus":{"order":6}},"activeClass":"utterances"},"stickytabs":true,"motion":{"enable":true,"async":true,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"HWL3YK5R6C","apiKey":"17ce0bb5e5dc71bf5e3e37006cc05b55","indexName":"blog","hits":{"per_page":10}}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="nodejs 创建静态服务器要使用 HTTP 服务器和客户端，则必须 require(&#39;http&#39;)。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试题 - 前端 - NodeJS">
+<meta property="og:url" content="https://www.tanglijin.top/2023/08/interview-fontend-nodejs/index.html">
+<meta property="og:site_name" content="唐李锦的空间">
+<meta property="og:description" content="nodejs 创建静态服务器要使用 HTTP 服务器和客户端，则必须 require(&#39;http&#39;)。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-08-03T03:19:00.000Z">
+<meta property="article:modified_time" content="2023-08-03T05:56:44.542Z">
+<meta property="article:author" content="唐李锦">
+<meta property="article:tag" content="面试题">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="Nodejs">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.tanglijin.top/2023/08/interview-fontend-nodejs/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.tanglijin.top/2023/08/interview-fontend-nodejs/","path":"2023/08/interview-fontend-nodejs/","title":"面试题 - 前端 - NodeJS"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>面试题 - 前端 - NodeJS | 唐李锦的空间</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSZ6XMJ0XL"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-WSZ6XMJ0XL","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?85df606204b9d08c7ff41bedceef09f7"></script>
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="唐李锦的空间" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">唐李锦的空间</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">69</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">16</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">74</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li><li class="menu-item menu-item-友情链接"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友情链接</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container">
+  <div class="algolia-stats"><hr></div>
+  <div class="algolia-hits"></div>
+  <div class="algolia-pagination"></div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#nodejs-%E5%88%9B%E5%BB%BA%E9%9D%99%E6%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">1.</span> <span class="nav-text">nodejs 创建静态服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#commonJS-%E8%A7%84%E8%8C%83-vs-ES6-%E6%A8%A1%E5%9D%97%E5%8C%96%E8%A7%84%E8%8C%83"><span class="nav-number">2.</span> <span class="nav-text">commonJS 规范 vs ES6 模块化规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#socket-%E9%80%9A%E4%BF%A1-%E8%81%8A%E5%A4%A9"><span class="nav-number">3.</span> <span class="nav-text">socket 通信 聊天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSON-Web-Token-JWT"><span class="nav-number">4.</span> <span class="nav-text">JSON Web Token (JWT)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#token-%E5%AD%98%E5%82%A8%E5%9C%A8-localStorage-%E9%87%8C%EF%BC%8C%E5%BD%93%E8%BF%87%E6%9C%9F%E6%97%B6%E8%BF%87%E6%9C%9F%E7%9A%84-token-%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86%EF%BC%9F"><span class="nav-number">5.</span> <span class="nav-text">token 存储在 localStorage 里，当过期时过期的 token 怎么处理？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%8E%9F%E7%94%9F-Node-js-%E6%93%8D%E5%81%9A-cookie%EF%BC%9F"><span class="nav-number">6.</span> <span class="nav-text">如何使用原生 Node.js 操做 cookie？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nextTick-%E5%92%8C-setImmediate-%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">7.</span> <span class="nav-text">nextTick 和 setImmediate 的区别是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#koa-%E5%92%8C-express-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">8.</span> <span class="nav-text">koa 和 express 的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#koa-%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="nav-number">9.</span> <span class="nav-text">koa 中间件的实现原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="nav-number">10.</span> <span class="nav-text">图片上传到服务器的过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%B8%B2%E6%9F%93%EF%BC%8C%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%B8%B2%E6%9F%93%E7%9A%84%E4%BC%98%E7%82%B9%EF%BC%9F"><span class="nav-number">11.</span> <span class="nav-text">什么是服务端渲染，服务端渲染的优点？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Node-js-%E4%BC%98%E7%BC%BA%E7%82%B9%E4%BB%A5%E5%8F%8A%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">12.</span> <span class="nav-text">Node.js 优缺点以及适用场景</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="唐李锦"
+      src="/downloads/images/avatar.png">
+  <p class="site-author-name" itemprop="name">唐李锦</p>
+  <div class="site-description" itemprop="description">我的名字叫唐李锦，这是我的空间。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">74</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">69</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="/downloads/images/wechat.png" title="微信 → &#x2F;downloads&#x2F;images&#x2F;wechat.png" rel="noopener me"><i class="fa fa-comments fa-fw"></i>微信</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/ljtang2009" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ljtang2009" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:ho_ho_gl@hotmail.com" title="E-Mail → mailto:ho_ho_gl@hotmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.tanglijin.top/2023/08/interview-fontend-nodejs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/downloads/images/avatar.png">
+      <meta itemprop="name" content="唐李锦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="唐李锦的空间">
+      <meta itemprop="description" content="我的名字叫唐李锦，这是我的空间。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="面试题 - 前端 - NodeJS | 唐李锦的空间">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          面试题 - 前端 - NodeJS
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-08-03 11:19:00 / 修改时间：13:56:44" itemprop="dateCreated datePublished" datetime="2023-08-03T11:19:00+08:00">2023-08-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98-%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">面试题-前端</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="nodejs-创建静态服务器"><a href="#nodejs-创建静态服务器" class="headerlink" title="nodejs 创建静态服务器"></a>nodejs 创建静态服务器</h2><p>要使用 HTTP 服务器和客户端，则必须 <code>require(&#39;http&#39;)</code>。</p>
+<span id="more"></span>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建本地服务器来从其接收数据</span></span><br><span class="line"><span class="keyword">const</span> server = http.<span class="title function_">createServer</span>(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">  res.<span class="title function_">writeHead</span>(<span class="number">200</span>, &#123; <span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/json&#x27;</span> &#125;);</span><br><span class="line">  res.<span class="title function_">end</span>(</span><br><span class="line">    <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(&#123;</span><br><span class="line">      <span class="attr">data</span>: <span class="string">&#x27;Hello World!&#x27;</span>,</span><br><span class="line">    &#125;),</span><br><span class="line">  );</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">server.<span class="title function_">listen</span>(<span class="number">8000</span>);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建本地服务器来从其接收数据</span></span><br><span class="line"><span class="keyword">const</span> server = http.<span class="title function_">createServer</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 监听请求事件</span></span><br><span class="line">server.<span class="title function_">on</span>(<span class="string">&#x27;request&#x27;</span>, <span class="function">(<span class="params">request, res</span>) =&gt;</span> &#123;</span><br><span class="line">  res.<span class="title function_">writeHead</span>(<span class="number">200</span>, &#123; <span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/json&#x27;</span> &#125;);</span><br><span class="line">  res.<span class="title function_">end</span>(</span><br><span class="line">    <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(&#123;</span><br><span class="line">      <span class="attr">data</span>: <span class="string">&#x27;Hello World!&#x27;</span>,</span><br><span class="line">    &#125;),</span><br><span class="line">  );</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">server.<span class="title function_">listen</span>(<span class="number">8000</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="commonJS-规范-vs-ES6-模块化规范"><a href="#commonJS-规范-vs-ES6-模块化规范" class="headerlink" title="commonJS 规范 vs ES6 模块化规范"></a>commonJS 规范 vs ES6 模块化规范</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; 某个几个接口 &#125; <span class="keyword">from</span> <span class="string">&#x27;antd&#x27;</span>; <span class="comment">//webpack (tree shaking 摇树优化)</span></span><br><span class="line"><span class="keyword">var</span> myview = <span class="built_in">require</span>(<span class="string">&#x27;antd&#x27;</span>); <span class="comment">//导入整个接口</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="socket-通信-聊天"><a href="#socket-通信-聊天" class="headerlink" title="socket 通信 聊天"></a>socket 通信 聊天</h2><p>WebSocket 并不是全新的协议，而是利用了 HTTP 协议来建立连接。我们来看看 WebSocket 连接是如何创建的。</p>
+<p>首先，WebSocket 连接必须由浏览器发起，因为请求协议是一个标准的 HTTP 请求，格式如下：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GET</span> <span class="string">ws://localhost:3000/ws/chat</span> <span class="meta">HTTP/1.1</span></span><br><span class="line"><span class="attribute">Host</span><span class="punctuation">: </span>localhost</span><br><span class="line"><span class="attribute">Upgrade</span><span class="punctuation">: </span>websocket</span><br><span class="line"><span class="attribute">Connection</span><span class="punctuation">: </span>Upgrade</span><br><span class="line"><span class="attribute">Origin</span><span class="punctuation">: </span>http://localhost:3000</span><br><span class="line"><span class="attribute">Sec-WebSocket-Key</span><span class="punctuation">: </span>client-random-string</span><br><span class="line"><span class="attribute">Sec-WebSocket-Version</span><span class="punctuation">: </span>13</span><br></pre></td></tr></table></figure>
+
+<p>该请求和普通的 HTTP 请求有几点不同：</p>
+<ol>
+<li>GET 请求的地址不是类似<code>/path/</code>，而是以<code>ws://</code>开头的地址；</li>
+<li>请求头<code>Upgrade: websocket</code>和<code>Connection: Upgrade</code>表示这个连接将要被转换为 WebSocket 连接；</li>
+<li><code>Sec-WebSocket-Key</code>是用于标识这个连接，并非用于加密数据；</li>
+<li><code>Sec-WebSocket-Version</code>指定了 WebSocket 的协议版本。</li>
+</ol>
+<p>随后，服务器如果接受该请求，就会返回如下响应：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">HTTP/1.1</span> <span class="number">101</span> Switching Protocols</span><br><span class="line"><span class="attribute">Upgrade</span><span class="punctuation">: </span>websocket</span><br><span class="line"><span class="attribute">Connection</span><span class="punctuation">: </span>Upgrade</span><br><span class="line"><span class="attribute">Sec-WebSocket-Accept</span><span class="punctuation">: </span>server-random-string</span><br></pre></td></tr></table></figure>
+
+<p>该响应代码<code>101</code>表示本次连接的 HTTP 协议即将被更改，更改后的协议就是<code>Upgrade: websocket</code>指定的 WebSocket 协议。</p>
+<p>版本号和子协议规定了双方能理解的数据格式，以及是否支持压缩等等。如果仅使用 WebSocket 的 API，就不需要关心这些。</p>
+<p>现在，一个 WebSocket 连接就建立成功，浏览器和服务器就可以随时主动发送消息给对方。消息有两种，一种是文本，一种是二进制数据。通常，我们可以发送 JSON 格式的文本，这样，在浏览器处理起来就十分容易。</p>
+<p><strong>为什么 WebSocket 连接可以实现全双工通信而 HTTP 连接不行呢？实际上 HTTP 协议是建立在 TCP 协议之上的，TCP 协议本身就实现了全双工通信，但是 HTTP 协议的请求－应答机制限制了全双工通信。WebSocket 连接建立以后，其实只是简单规定了一下：接下来，咱们通信就不使用 HTTP 协议了，直接互相发数据吧。</strong></p>
+<p>安全的 WebSocket 连接机制和 HTTPS 类似。首先，浏览器用<code>wss://xxx</code>创建 WebSocket 连接时，会先通过 HTTPS 创建安全的连接，然后，该 HTTPS 连接升级为 WebSocket 连接，底层通信走的仍然是安全的 SSL&#x2F;TLS 协议。</p>
+<p><code>websocket全双工, 双向通信 onopen  onmessage  onclose onerror</code></p>
+<p>服务器：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">WebSocket</span> = <span class="built_in">require</span>(<span class="string">&#x27;ws&#x27;</span>);</span><br><span class="line"><span class="title class_">WebSocketServer</span> = <span class="title class_">WebSocket</span>.<span class="property">WebSocketServer</span>;</span><br><span class="line"><span class="keyword">const</span> wss = <span class="keyword">new</span> <span class="title class_">WebSocketServer</span>(&#123; <span class="attr">port</span>: <span class="number">8080</span> &#125;);</span><br><span class="line">wss.<span class="title function_">on</span>(<span class="string">&#x27;connection&#x27;</span>, <span class="keyword">function</span> <span class="title function_">connection</span>(<span class="params">ws</span>) &#123;</span><br><span class="line">  ws.<span class="title function_">on</span>(<span class="string">&#x27;message&#x27;</span>, <span class="keyword">function</span> <span class="title function_">message</span>(<span class="params">data, isBinary</span>) &#123;</span><br><span class="line">    wss.<span class="property">clients</span>.<span class="title function_">forEach</span>(<span class="keyword">function</span> <span class="title function_">each</span>(<span class="params">client</span>) &#123;</span><br><span class="line">      <span class="keyword">if</span> (client !== ws &amp;&amp; client.<span class="property">readyState</span> === <span class="title class_">WebSocket</span>.<span class="property">OPEN</span>) &#123;</span><br><span class="line">        client.<span class="title function_">send</span>(data, &#123; <span class="attr">binary</span>: isBinary &#125;);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  ws.<span class="title function_">send</span>(<span class="string">&#x27;欢迎加入聊天室&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>客户端：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ws = <span class="keyword">new</span> <span class="title class_">WebSocket</span>(<span class="string">&#x27;ws://localhost:8080&#x27;</span>);</span><br><span class="line">ws.<span class="property">onopen</span> = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;open&#x27;</span>);</span><br><span class="line">&#125;;</span><br><span class="line">ws.<span class="property">onmessage</span> = <span class="function">(<span class="params">evt</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(evt.<span class="property">data</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="JSON-Web-Token-JWT"><a href="#JSON-Web-Token-JWT" class="headerlink" title="JSON Web Token (JWT)"></a>JSON Web Token (JWT)</h2><p>我为什么要保存这可恶的 session 呢， 只让每个客户端去保存该多好？</p>
+<p>当然， 如果一个人的 token 被别人偷走了， 那我也没办法， 我也会认为小偷就是合法用户， 这其实和一个人的 session id 被别人偷走是一样的。</p>
+<p>这样一来， 我就不保存 session id 了， 我只是生成 token , 然后验证 token ， 我用我的 CPU 计算时间获取了我的 session 存储空间 ！</p>
+<p>解除了 session id 这个负担， 可以说是无事一身轻， 我的机器集群现在可以轻松地做水平扩展， 用户访问量增大， 直接加机器就行。 这种无状态的感觉实在是太好了！</p>
+<p>缺点：</p>
+<blockquote>
+<ol>
+<li>占带宽，正常情况下要比 session_id 更大，需要消耗更多流量，挤占更多带宽，假如你的网站每月有 10 万次的浏览器，就意味着要多开销几十兆的流量。听起来并不多，但日积月累也是不小一笔开销。实际上，许多人会在 JWT 中存储的信息会更多；</li>
+<li>无法在服务端注销，那么久很难解决劫持问题；</li>
+<li>性能问题，JWT 的卖点之一就是加密签名，由于这个特性，接收方得以验证 JWT 是否有效且被信任。对于有着严格性能要求的 Web 应用，这并不理想，尤其对于单线程环境。</li>
+</ol>
+</blockquote>
+<p>注意：</p>
+<blockquote>
+<p>CSRF 攻击的原因是浏览器会自动带上 cookie，而不会带上 token；<br>以 CSRF 攻击为例：<br>cookie：用户点击了链接，cookie 未失效，导致发起请求后后端以为是用户正常操作，于是进行扣款操作；<br>token：用户点击链接，由于浏览器不会自动带上 token，所以即使发了请求，后端的 token 验证不会通过，所以不会进行扣款操作；</p>
+</blockquote>
+<p>实现:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//jsonwebtoken 封装</span></span><br><span class="line"><span class="keyword">const</span> jsonwebtoken = <span class="built_in">require</span>(<span class="string">&#x27;jsonwebtoken&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> secret = <span class="string">&#x27;kerwin&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">JWT</span> = &#123;</span><br><span class="line">  <span class="title function_">generate</span>(<span class="params">value, exprires</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> jsonwebtoken.<span class="title function_">sign</span>(value, secret, &#123; <span class="attr">expiresIn</span>: exprires &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="title function_">verify</span>(<span class="params">token</span>) &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> jsonwebtoken.<span class="title function_">verify</span>(token, secret);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = <span class="variable constant_">JWT</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="token-存储在-localStorage-里，当过期时过期的-token-怎么处理？"><a href="#token-存储在-localStorage-里，当过期时过期的-token-怎么处理？" class="headerlink" title="token 存储在 localStorage 里，当过期时过期的 token 怎么处理？"></a>token 存储在 localStorage 里，当过期时过期的 token 怎么处理？</h2><p>当前端进行页面跳转或者需要鉴权的操作时，会发送请求到后台，而 token 会跟随请求头一起发送，后台通过请求头接收到 token 时会进行判断，若是过期了，应该返回一个 401 的状态码给前端，前端接收到以后，应该重定向到登录页要求用户重新登陆。axios 拦截器。</p>
+<h2 id="如何使用原生-Node-js-操做-cookie？"><a href="#如何使用原生-Node-js-操做-cookie？" class="headerlink" title="如何使用原生 Node.js 操做 cookie？"></a>如何使用原生 Node.js 操做 cookie？</h2><ul>
+<li>获取 cookie： req.headers.cookie</li>
+<li>设置 cookie： res.writeHead(200, { ‘Set-Cookie’: ‘myCookie&#x3D;test’, ‘Content-Type’: ‘text&#x2F;plain’ })</li>
+</ul>
+<h2 id="nextTick-和-setImmediate-的区别是什么？"><a href="#nextTick-和-setImmediate-的区别是什么？" class="headerlink" title="nextTick 和 setImmediate 的区别是什么？"></a>nextTick 和 setImmediate 的区别是什么？</h2><p>nextTick 和 setImmediate 都是延迟加载。但是 nextTick 是放在当前队列的最后一个执行，setImmediate 是在下一个队列的队首执行</p>
+<h2 id="koa-和-express-的区别"><a href="#koa-和-express-的区别" class="headerlink" title="koa 和 express 的区别"></a>koa 和 express 的区别</h2><ul>
+<li>最大的区别在于语法，experss 的异步采用的是回调函数的形式，而 koa1 支持 generator + yeild，koa2 支持 await&#x2F;async，无疑更加优雅。</li>
+<li>中间件的区别，koa 采用洋葱模型，进去顺序执行，出去反向执行，支持 context 传递数据 express 本身无洋葱模型，需要引入插件，不支持 context express 的中间件中执行异步函数，执行顺序不会按照洋葱模型，异步的执行结果有可能被放到最后，response 之前。 这是由于，其中间件执行机制，递归回调中没有等待中间件中的异步函数执行完毕，就是没有 await 中间件异步函数</li>
+<li>集成度区别 express 内置了很多中间件，集成度高，使用省心， koa 轻量简洁，容易定制</li>
+</ul>
+<h2 id="koa-中间件的实现原理"><a href="#koa-中间件的实现原理" class="headerlink" title="koa 中间件的实现原理"></a>koa 中间件的实现原理</h2><ol>
+<li>每个中间件默认接受两个参数，第一个参数是 Context 对象，第二个参数是 next 函数。只要调用 next 函数，就可以把执行权转交给下一个中间件。</li>
+<li>如果中间件内部没有调用 next 函数，那么执行权就不会传递下去。</li>
+<li>多个中间件会形成一个栈结构，以“先进后出”的顺序执行。整个过程就像，先是入栈，然后出栈的操作。</li>
+</ol>
+<h2 id="图片上传到服务器的过程"><a href="#图片上传到服务器的过程" class="headerlink" title="图片上传到服务器的过程"></a>图片上传到服务器的过程</h2><p>Multer 是一个 node.js 中间件，用于处理 <code>multipart/form-data</code> 类型的表单数据，它主要用于上传文件。</p>
+<p><strong>注意</strong>: Multer 不会处理任何非 <code>multipart/form-data</code> 类型的表单数据。</p>
+<p><code>npm install --save multer</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//前后端分离-前端</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> params = <span class="keyword">new</span> <span class="title class_">FormData</span>();</span><br><span class="line">params.<span class="title function_">append</span>(<span class="string">&#x27;kerwinfile&#x27;</span>, file.<span class="property">file</span>);</span><br><span class="line">params.<span class="title function_">append</span>(<span class="string">&#x27;username&#x27;</span>, <span class="variable language_">this</span>.<span class="property">username</span>);</span><br><span class="line"><span class="keyword">const</span> config = &#123;</span><br><span class="line">  <span class="attr">headers</span>: &#123;</span><br><span class="line">    <span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;multipart/form-data&#x27;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">http.<span class="title function_">post</span>(<span class="string">&#x27;/api/upload&#x27;</span>, params, config).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">imgpath</span> = <span class="string">&#x27;http://localhost:3000&#x27;</span> + res.<span class="property">data</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>Multer 会添加一个 <code>body</code> 对象 以及 <code>file</code> 或 <code>files</code> 对象 到 express 的 <code>request</code> 对象中。 <code>body</code> 对象包含表单的文本域信息，<code>file</code> 或 <code>files</code> 对象包含对象表单上传的文件信息。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//前后端分离-后端</span></span><br><span class="line">router.<span class="title function_">post</span>(<span class="string">&#x27;/upload&#x27;</span>, upload.<span class="title function_">single</span>(<span class="string">&#x27;kerwinfile&#x27;</span>), <span class="keyword">function</span> (<span class="params">req, res, next</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(req.<span class="property">file</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="什么是服务端渲染，服务端渲染的优点？"><a href="#什么是服务端渲染，服务端渲染的优点？" class="headerlink" title="什么是服务端渲染，服务端渲染的优点？"></a>什么是服务端渲染，服务端渲染的优点？</h2><ul>
+<li>服务端渲染：页面渲染过程是在服务端完成，最终的 HTML 字符串，直接通过请求发送给客户端。</li>
+<li>服务器端渲染的优势就是利于 SEO 优化，首屏加载快，因为客户端接收到的是完整的 HTML 页面。</li>
+</ul>
+<h2 id="Node-js-优缺点以及适用场景"><a href="#Node-js-优缺点以及适用场景" class="headerlink" title="Node.js 优缺点以及适用场景"></a>Node.js 优缺点以及适用场景</h2><p>优点:</p>
+<ul>
+<li>Node.js 采用事件驱动、异步编程，为网络服务而设计。简单易学，可以很快上手做后端设计。</li>
+<li>Node.js 非阻塞模式的 IO 处理给 Node.js 带来在相对低系统资源耗用下的高性能与出众的负载能力，非常适合用作依赖其它 IO 资源的中间层服务。</li>
+<li>Node.js 轻量高效，可以认为是数据密集型分布式部署环境下的实时应用系统的完美解决方案。</li>
+</ul>
+<p>缺点:</p>
+<ul>
+<li>单线程，可靠性低，一旦这个进程崩掉，那么整个 web 服务就崩掉了。</li>
+<li>开源组件库质量参差不齐，更新快，向下不兼容</li>
+<li>不适合做企业级应用开发，特别是复杂业务逻辑的，代码不好维护，事务支持不是很好。</li>
+</ul>
+<p>适用场景:</p>
+<ul>
+<li>大量 Ajax 请求的应用，例如个性化应用，每个用户看到的页面都不一样，需要在页面加载的时候发起 Ajax 请求，NodeJS 能响应大量的并发请求。</li>
+<li>实时 ：如在线聊天，实时通知推送等等</li>
+<li>工具类应用：海量的工具，小到前端压缩部署，大到桌面图形界面应用程序</li>
+<li>总而言之，NodeJS 适合运用在高并发、I&#x2F;O 密集、少量业务逻辑的场景。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/downloads/images/reward/wechatpay.png" alt="唐李锦 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/downloads/images/reward/alipay.png" alt="唐李锦 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>唐李锦
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.tanglijin.top/2023/08/interview-fontend-nodejs/" title="面试题 - 前端 - NodeJS">https://www.tanglijin.top/2023/08/interview-fontend-nodejs/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/" rel="tag"><i class="fa fa-tag"></i> 面试题</a>
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+              <a href="/tags/Nodejs/" rel="tag"><i class="fa fa-tag"></i> Nodejs</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/08/interview-fontend-project/" rel="prev" title="面试题 - 前端 - 工程化&代码管理">
+                  <i class="fa fa-chevron-left"></i> 面试题 - 前端 - 工程化&代码管理
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/08/interview-fontend-vue/" rel="next" title="面试题 - 前端 - Vue">
+                  面试题 - 前端 - Vue <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2022 – 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">唐李锦</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/4.17.1/algoliasearch-lite.umd.js" integrity="sha256-F7emIId74fYoGrHzsnu3iClRHIbBMhMCbxDoA1cfMAY=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.56.1/instantsearch.production.min.js" integrity="sha256-lz9C+x8+6w2rh56x5TrH5iYmE4Js2FiJS5h0tuMz7hQ=" crossorigin="anonymous"></script><script src="/js/third-party/search/algolia-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"ljtang2009/blog","issue_term":"pathname","theme":"preferred-color-scheme","label":"Utteranc"}</script>
+<script src="/js/third-party/comments/utterances.js"></script>
+
+</body>
+</html>

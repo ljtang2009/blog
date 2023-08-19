@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/downloads/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/downloads/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/downloads/images/favicon/favicon-16x16.png">
+  <link rel="mask-icon" href="/downloads/images/favicon/favicon.svg" color="#222">
+  <meta name="google-site-verification" content="_2OctYreBeDkfTRiEHaXwB0wYaMK6F84qG97fNjM4qc">
+  <meta name="msvalidate.01" content="84BDF5B17B36630CC4297E351B2B0D64">
+  <meta name="baidu-site-verification" content="code-kuUu52WEwj">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.tanglijin.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"style":"flat","show_result":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":true,"nav":{"utterances":{"order":-1},"changyan":{"text":"畅言","order":0},"livere":{"text":"来必力","order":1},"valine":{"order":2},"disqus":{"order":3},"disqusjs":{"order":4},"gitalk":{"order":5},"giscus":{"order":6}},"activeClass":"utterances"},"stickytabs":true,"motion":{"enable":true,"async":true,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"HWL3YK5R6C","apiKey":"17ce0bb5e5dc71bf5e3e37006cc05b55","indexName":"blog","hits":{"per_page":10}}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="git 常用命令git init 初始化仓库 git status 查看当前各个区域的代码状态。 git log 查看 commit 记录">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试题 - 前端 - 工程化&amp;代码管理">
+<meta property="og:url" content="https://www.tanglijin.top/2023/08/interview-fontend-project/index.html">
+<meta property="og:site_name" content="唐李锦的空间">
+<meta property="og:description" content="git 常用命令git init 初始化仓库 git status 查看当前各个区域的代码状态。 git log 查看 commit 记录">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-08-02T04:39:00.000Z">
+<meta property="article:modified_time" content="2023-08-03T03:15:37.664Z">
+<meta property="article:author" content="唐李锦">
+<meta property="article:tag" content="面试题">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="工程化">
+<meta property="article:tag" content="代码管理">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.tanglijin.top/2023/08/interview-fontend-project/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.tanglijin.top/2023/08/interview-fontend-project/","path":"2023/08/interview-fontend-project/","title":"面试题 - 前端 - 工程化&代码管理"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>面试题 - 前端 - 工程化&代码管理 | 唐李锦的空间</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSZ6XMJ0XL"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-WSZ6XMJ0XL","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?85df606204b9d08c7ff41bedceef09f7"></script>
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="唐李锦的空间" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">唐李锦的空间</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">69</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">16</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">74</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li><li class="menu-item menu-item-友情链接"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友情链接</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container">
+  <div class="algolia-stats"><hr></div>
+  <div class="algolia-hits"></div>
+  <div class="algolia-pagination"></div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">git 常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E4%B8%AD%E9%83%BD%E6%80%8E%E4%B9%88%E7%94%A8-git"><span class="nav-number">2.</span> <span class="nav-text">工作中都怎么用 git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sass-%E5%92%8C-scss-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">3.</span> <span class="nav-text">sass 和 scss 的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webpack-%E7%90%86%E8%A7%A3"><span class="nav-number">4.</span> <span class="nav-text">webpack 理解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webpack-%E9%85%8D%E7%BD%AE"><span class="nav-number">5.</span> <span class="nav-text">webpack 配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%98%AF%E5%90%A6%E7%86%9F%E7%9F%A5-webpack-%E4%BB%A3%E7%A0%81%E5%88%86%E5%89%B2"><span class="nav-number">6.</span> <span class="nav-text">是否熟知 webpack 代码分割</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webpack-4-%E5%A4%A7%E6%A0%B8%E5%BF%83%E7%90%86%E5%BF%B5%EF%BC%8C-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86"><span class="nav-number">7.</span> <span class="nav-text">webpack 4 大核心理念， 编译原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webapck-%E6%9E%84%E5%BB%BA%E4%BC%98%E5%8C%96%E5%AE%9E%E6%88%98-%E6%89%93%E5%8C%85%E6%97%B6%E9%97%B4%E8%BF%87%E9%95%BF%EF%BC%8C-%E5%8F%AF%E4%BB%A5%E4%BC%98%E5%8C%96%E6%97%B6%E9%97%B4%E7%9F%AD%E7%82%B9-20s"><span class="nav-number">8.</span> <span class="nav-text">webapck 构建优化实战 (打包时间过长， 可以优化时间短点 20s)</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="唐李锦"
+      src="/downloads/images/avatar.png">
+  <p class="site-author-name" itemprop="name">唐李锦</p>
+  <div class="site-description" itemprop="description">我的名字叫唐李锦，这是我的空间。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">74</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">69</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="/downloads/images/wechat.png" title="微信 → &#x2F;downloads&#x2F;images&#x2F;wechat.png" rel="noopener me"><i class="fa fa-comments fa-fw"></i>微信</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/ljtang2009" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ljtang2009" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:ho_ho_gl@hotmail.com" title="E-Mail → mailto:ho_ho_gl@hotmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.tanglijin.top/2023/08/interview-fontend-project/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/downloads/images/avatar.png">
+      <meta itemprop="name" content="唐李锦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="唐李锦的空间">
+      <meta itemprop="description" content="我的名字叫唐李锦，这是我的空间。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="面试题 - 前端 - 工程化&代码管理 | 唐李锦的空间">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          面试题 - 前端 - 工程化&代码管理
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-08-02 12:39:00" itemprop="dateCreated datePublished" datetime="2023-08-02T12:39:00+08:00">2023-08-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-08-03 11:15:37" itemprop="dateModified" datetime="2023-08-03T11:15:37+08:00">2023-08-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98-%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">面试题-前端</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="git-常用命令"><a href="#git-常用命令" class="headerlink" title="git 常用命令"></a>git 常用命令</h2><p>git init 初始化仓库</p>
+<p>git status 查看当前各个区域的代码状态。</p>
+<p>git log 查看 commit 记录</p>
+<span id="more"></span>
+
+<p>git reflog 查看完整记录</p>
+<p>git add 添加工作区代码到暂存区</p>
+<p>Git commit 暂存区代码的提交</p>
+<p>git reset 代码的版本回退</p>
+<p>git stash 将暂存处代码收起来</p>
+<p>git stash pop 将收起来的暂存区的代码释放出来</p>
+<p>Git tag 可以打标签</p>
+<p>Git branch 基于当前分支创建一个分支</p>
+<p>git checkout 切换分支</p>
+<p>git merge 合并分支</p>
+<p>git remote add origin 添加远端仓库地址</p>
+<p>git clone 克隆仓库</p>
+<p>git pull 下拉对应分支代码</p>
+<p>git push 上传对应分支代码</p>
+<h2 id="工作中都怎么用-git"><a href="#工作中都怎么用-git" class="headerlink" title="工作中都怎么用 git"></a>工作中都怎么用 git</h2><p>公司中每一个项目都会有一个对应的远端仓库（gitLab），我们需要创建账号并配置权限。</p>
+<p>一般公司会有几个主要分支，分别对应 4 个环境，当代码更新的时候会通过流水线自动部署到对应的环境：</p>
+<ol>
+<li><p>发布分支（prod、master）这个分支代码对应的就是线上的代码</p>
+</li>
+<li><p>UAT 分支（uat），这个分支上的代码对应的是公司内部演示用的分支</p>
+</li>
+<li><p>TEST 分支（test），这个分支的代码是用于测试</p>
+</li>
+<li><p>DEV 分支（dev），研发自测分支</p>
+</li>
+</ol>
+<p>正常功能开发或者 bug 修复， 从 dev 分支拉取代码，进行开发就可以。</p>
+<p>如果是解决线上 bug，应该从 master 拉取一个分支（hotfix__）, 然后开发完成后将其合并到 test 或者 uat，测试没有问题后，将其合并到 master。还要将 hotfix 上对应的 commit 合并到 dev 分支， 专业 dev 分支也就修复了这个 bug。</p>
+<p>如果当前版本代码需要回退（功能不做了，要么要去先着急干别的）， 执行 git reset –hard， 再回到当前的 commit 也是 git reset 只不过需要注意，此时要通过 git reflog 来查看时间最后的一次 commit。</p>
+<h2 id="sass-和-scss-的区别"><a href="#sass-和-scss-的区别" class="headerlink" title="sass 和 scss 的区别"></a>sass 和 scss 的区别</h2><p>Sass 是一款强化 CSS 的辅助工具，它在 CSS 语法的基础上增加了变量 (variables)、嵌套 (nested rules)、混合 (mixins)、导入 (inline imports) 等高级功能，这些拓展令 CSS 更加强大与优雅。使用 Sass 以及 Sass 的样式库（如 Compass）有助于更好地组织管理样式文件，以及更高效地开发项目。</p>
+<p>scss 只是 sass 的一个语言版本，.scss 文件的特点是层级靠{}来区分，.sass 文件的特点的层级靠缩进来区分</p>
+<h2 id="webpack-理解"><a href="#webpack-理解" class="headerlink" title="webpack 理解"></a>webpack 理解</h2><p>webpack 就是一个模块化的打包工具。而且能将浏览器不认识的语言，进行编译分析，最终打包生成浏览器认识的语言（需要配置相关 loader 和插件）。</p>
+<h2 id="webpack-配置"><a href="#webpack-配置" class="headerlink" title="webpack 配置"></a>webpack 配置</h2><p>webpack 包含 mode 模式、entry 入口、output 出口、plugins 插件、loader、resolve、devServer 开发服务器相关的基本配置。</p>
+<p>在 webpack 中可以通过多入口的配置，每个入口都会去查询对应的依赖关系图，进行单独的代码。</p>
+<p>在模块化开发过程中往往会将各种不同类型的文件都看做是模块来进行互相导入导出，比如将图片、css、sass 之类的文件都可以导入到 js 文件中，但是在打包的过程中需要将这些文件都寻找到然后单独的分离出去，这样就需要用到对应的 loader 来进行文件处理，不同的文件、不同的 loader，处理方式也不一样。</p>
+<p>比如 css 文件可以利用 style-loader 将其代码生成 style 标签放入到 head 中，也可以利用 minicssextra 插件中 loader 将其抽离成 css 文件。</p>
+<p>img 文件可以利用 url-loader 和 file-loader 对其进行 base64 的转化或者单独抽出。</p>
+<h2 id="是否熟知-webpack-代码分割"><a href="#是否熟知-webpack-代码分割" class="headerlink" title="是否熟知 webpack 代码分割"></a>是否熟知 webpack 代码分割</h2><p>对于单页面应用，为了加快首页加载，就需要进行代码分隔。</p>
+<p>组件模块化导入的时候可以采用懒加载的形式，就会单独打包对应的代码。</p>
+<p>有时候我们想把某个路由下的所有组件都打包在同个异步块（chunk）中。只需要使用命名 chunk，一个特殊的注释语法来提供 chunk name（需要 Webpack ＞ 2.4）：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">UserDetails</span> = (<span class="params"></span>) =&gt; <span class="keyword">import</span>(<span class="comment">/* webpackChunkName: &quot;group-user&quot; */</span> <span class="string">&#x27;./UserDetails.vue&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">UserDashboard</span> = (<span class="params"></span>) =&gt; <span class="keyword">import</span>(<span class="comment">/* webpackChunkName: &quot;group-user&quot; */</span> <span class="string">&#x27;./UserDashboard.vue&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">UserProfileEdit</span> = (<span class="params"></span>) =&gt; <span class="keyword">import</span>(<span class="comment">/* webpackChunkName: &quot;group-user&quot; */</span> <span class="string">&#x27;./UserProfileEdit.vue&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="webpack-4-大核心理念，-编译原理"><a href="#webpack-4-大核心理念，-编译原理" class="headerlink" title="webpack 4 大核心理念， 编译原理"></a>webpack 4 大核心理念， 编译原理</h2><p>entry,output , loaders , pluguins<br>​ 一切皆为模块，由于 webpack 只支持 js 文件，所以需要用 loader 转换为 webpack 支持的模块，其中 plugin 用于扩张 webpack 的功能，在 webpack 构建生命周期的过程中，在合适的时机做了合适的事情。</p>
+<h2 id="webapck-构建优化实战-打包时间过长，-可以优化时间短点-20s"><a href="#webapck-构建优化实战-打包时间过长，-可以优化时间短点-20s" class="headerlink" title="webapck 构建优化实战 (打包时间过长， 可以优化时间短点 20s)"></a>webapck 构建优化实战 (打包时间过长， 可以优化时间短点 20s)</h2><ol>
+<li>提取公共库， 避免重复引用。 使用 DllPlugin，把第三方库文件分离出来单独编译，并且缓存; 极大的减少业务页面的编译时间。dll 方式也就是通过配置，告诉 webpack 指定库在项目中的位置，从而直接引入，不将其打包在内。</li>
+<li>happypack, 多线程解析文件，如 babel-loader 等耗时较长的。还可以配合 cache-loader 使用。</li>
+<li>缓存 cache-loader</li>
+<li>loaders 应尽可能配置解析路径 include 参数，排除路径 exclude 参数， 减少解析时查询范围。</li>
+<li>dev 阶段 devtool 设置成 cheap-module-eval-source-map， 已经能满足调试需求， 编译能更快。</li>
+<li>product 阶段 去掉 source-map</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/downloads/images/reward/wechatpay.png" alt="唐李锦 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/downloads/images/reward/alipay.png" alt="唐李锦 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>唐李锦
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.tanglijin.top/2023/08/interview-fontend-project/" title="面试题 - 前端 - 工程化&amp;代码管理">https://www.tanglijin.top/2023/08/interview-fontend-project/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/" rel="tag"><i class="fa fa-tag"></i> 面试题</a>
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+              <a href="/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/" rel="tag"><i class="fa fa-tag"></i> 工程化</a>
+              <a href="/tags/%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> 代码管理</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/07/interview-fontend-es6/" rel="prev" title="面试题 - 前端 - ES6-ES13">
+                  <i class="fa fa-chevron-left"></i> 面试题 - 前端 - ES6-ES13
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/08/interview-fontend-nodejs/" rel="next" title="面试题 - 前端 - NodeJS">
+                  面试题 - 前端 - NodeJS <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2022 – 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">唐李锦</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/4.17.1/algoliasearch-lite.umd.js" integrity="sha256-F7emIId74fYoGrHzsnu3iClRHIbBMhMCbxDoA1cfMAY=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.56.1/instantsearch.production.min.js" integrity="sha256-lz9C+x8+6w2rh56x5TrH5iYmE4Js2FiJS5h0tuMz7hQ=" crossorigin="anonymous"></script><script src="/js/third-party/search/algolia-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"ljtang2009/blog","issue_term":"pathname","theme":"preferred-color-scheme","label":"Utteranc"}</script>
+<script src="/js/third-party/comments/utterances.js"></script>
+
+</body>
+</html>

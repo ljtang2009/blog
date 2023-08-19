@@ -36,8 +36,9 @@
 <meta property="og:image" content="https://www.tanglijin.top/2023/06/interview-fontend-js/cookie%E5%92%8Csession%E9%89%B4%E6%9D%83-%E4%BC%A0%E7%BB%9Fcookie%E9%AA%8C%E8%AF%81.drawio.png">
 <meta property="og:image" content="https://www.tanglijin.top/2023/06/interview-fontend-js/cookie%E5%92%8Csession%E9%89%B4%E6%9D%83-session%E9%AA%8C%E8%AF%81.drawio.png">
 <meta property="og:image" content="https://www.tanglijin.top/2023/06/interview-fontend-js/cookie%E5%92%8Csession%E9%89%B4%E6%9D%83-%E7%BC%93%E5%AD%98.drawio.png">
+<meta property="og:image" content="https://www.tanglijin.top/2023/06/interview-fontend-js/CSRF%E6%94%BB%E5%87%BB.drawio.png">
 <meta property="article:published_time" content="2023-06-30T02:51:00.000Z">
-<meta property="article:modified_time" content="2023-07-08T10:01:51.410Z">
+<meta property="article:modified_time" content="2023-07-11T15:26:03.764Z">
 <meta property="article:author" content="唐李锦">
 <meta property="article:tag" content="面试题">
 <meta property="article:tag" content="前端">
@@ -107,7 +108,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">64</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">16</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">69</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li><li class="menu-item menu-item-友情链接"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友情链接</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">69</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">16</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">74</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li><li class="menu-item menu-item-友情链接"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友情链接</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -154,7 +155,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D-JS-%E6%9C%89%E5%93%AA%E4%BA%9B%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">介绍 JS 有哪些内置对象？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%9C%80%E5%B0%8F%E5%8C%96%E9%87%8D%E7%BB%98-repaint-%E5%92%8C%E5%9B%9E%E6%B5%81-reflow-%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">如何最小化重绘(repaint)和回流(reflow)？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Javascript-%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE"><span class="nav-number">3.</span> <span class="nav-text">Javascript 作用域链?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82"><span class="nav-number">4.</span> <span class="nav-text">数据请求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%A8%E5%9F%9F%E5%92%8C%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5"><span class="nav-number">5.</span> <span class="nav-text">跨域和同源策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="nav-number">6.</span> <span class="nav-text">面向对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AD%E5%8C%85"><span class="nav-number">7.</span> <span class="nav-text">闭包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D"><span class="nav-number">8.</span> <span class="nav-text">数组去重</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E5%90%88%E5%B9%B6"><span class="nav-number">9.</span> <span class="nav-text">数组合并</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cookie-%E5%92%8C-session-%EF%BC%88%E7%99%BB%E5%BD%95%E9%89%B4%E6%9D%83%E6%98%AF%E6%80%8E%E4%B9%88%E5%81%9A%E7%9A%84%EF%BC%89"><span class="nav-number">10.</span> <span class="nav-text">cookie 和 session （登录鉴权是怎么做的）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E5%92%8C%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">11.</span> <span class="nav-text">线程和进程的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98%E5%92%8C%E5%BC%BA%E7%BC%93%E5%AD%98%E5%8C%BA%E5%88%AB"><span class="nav-number">12.</span> <span class="nav-text">协商缓存和强缓存区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http-%E5%92%8C-https"><span class="nav-number">13.</span> <span class="nav-text">http 和 https</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8E%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98%E4%BD%A0%E6%98%AF%E6%80%8E%E4%B9%88%E8%A7%A3%E5%86%B3%E7%9A%84"><span class="nav-number">14.</span> <span class="nav-text">对于工作中的跨域问题你是怎么解决的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF"><span class="nav-number">15.</span> <span class="nav-text">事件循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AE%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1"><span class="nav-number">16.</span> <span class="nav-text">微任务和宏任务</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D-JS-%E6%9C%89%E5%93%AA%E4%BA%9B%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">介绍 JS 有哪些内置对象？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%9C%80%E5%B0%8F%E5%8C%96%E9%87%8D%E7%BB%98-repaint-%E5%92%8C%E5%9B%9E%E6%B5%81-reflow-%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">如何最小化重绘(repaint)和回流(reflow)？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Javascript-%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE"><span class="nav-number">3.</span> <span class="nav-text">Javascript 作用域链?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82"><span class="nav-number">4.</span> <span class="nav-text">数据请求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%A8%E5%9F%9F%E5%92%8C%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5"><span class="nav-number">5.</span> <span class="nav-text">跨域和同源策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="nav-number">6.</span> <span class="nav-text">面向对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AD%E5%8C%85"><span class="nav-number">7.</span> <span class="nav-text">闭包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D"><span class="nav-number">8.</span> <span class="nav-text">数组去重</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E5%90%88%E5%B9%B6"><span class="nav-number">9.</span> <span class="nav-text">数组合并</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cookie-%E5%92%8C-session-%EF%BC%88%E7%99%BB%E5%BD%95%E9%89%B4%E6%9D%83%E6%98%AF%E6%80%8E%E4%B9%88%E5%81%9A%E7%9A%84%EF%BC%89"><span class="nav-number">10.</span> <span class="nav-text">cookie 和 session （登录鉴权是怎么做的）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E5%92%8C%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">11.</span> <span class="nav-text">线程和进程的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98%E5%92%8C%E5%BC%BA%E7%BC%93%E5%AD%98%E5%8C%BA%E5%88%AB"><span class="nav-number">12.</span> <span class="nav-text">协商缓存和强缓存区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http-%E5%92%8C-https"><span class="nav-number">13.</span> <span class="nav-text">http 和 https</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8E%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98%E4%BD%A0%E6%98%AF%E6%80%8E%E4%B9%88%E8%A7%A3%E5%86%B3%E7%9A%84"><span class="nav-number">14.</span> <span class="nav-text">对于工作中的跨域问题你是怎么解决的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF"><span class="nav-number">15.</span> <span class="nav-text">事件循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AE%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%8F%E4%BB%BB%E5%8A%A1"><span class="nav-number">16.</span> <span class="nav-text">微任务和宏任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http-%E7%8A%B6%E6%80%81%E7%A0%81%E6%9C%89%E9%82%A3%E4%BA%9B%EF%BC%9F%E5%88%86%E5%88%AB%E4%BB%A3%E8%A1%A8%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D%EF%BC%9F"><span class="nav-number">17.</span> <span class="nav-text">http 状态码有那些？分别代表是什么意思？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E9%A1%B5%E9%9D%A2%E4%BB%8E%E8%BE%93%E5%85%A5-URL-%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%8A%A0%E8%BD%BD%E6%98%BE%E7%A4%BA%E5%AE%8C%E6%88%90%EF%BC%8C%E8%BF%99%E4%B8%AA%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%83%BD%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">18.</span> <span class="nav-text">一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E7%AB%AF%E6%94%BB%E5%87%BB"><span class="nav-number">19.</span> <span class="nav-text">前端攻击</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -169,7 +170,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">69</span>
+          <span class="site-state-item-count">74</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -180,7 +181,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">64</span>
+        <span class="site-state-item-count">69</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -264,7 +265,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-07-08 18:01:51" itemprop="dateModified" datetime="2023-07-08T18:01:51+08:00">2023-07-08</time>
+      <time title="修改时间：2023-07-11 23:26:03" itemprop="dateModified" datetime="2023-07-11T23:26:03+08:00">2023-07-11</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -397,29 +398,29 @@
 <h2 id="对于工作中的跨域问题你是怎么解决的"><a href="#对于工作中的跨域问题你是怎么解决的" class="headerlink" title="对于工作中的跨域问题你是怎么解决的"></a>对于工作中的跨域问题你是怎么解决的</h2><p>在本地开发的过程中，本地服务器访问测试服务器接口的，也基本都是后端去处理 CORS 跨域，但是有些时候也可能需要前端在脚手架对应的 devServer 中配置 Proxy 来进行开发时候的跨域处理。</p>
 <p>在线上的各种环境中（开发、测试、生产）环境一般是不会有跨域问题的，因为服务器和前端资源一般是会部署在同一个域的服务器下的，但是也有端口或者不同域的情况，这些时候往往都是后端去利用 CORS 来处理的跨域问题。</p>
 <p>在一些极少的情况下加，项目中可能会访问一些第三方的 Api，比如定位、天气等等接口的时候，可能会根据接口需求进行 jsonp 的跨域处理。</p>
-<h2 id="事件循环"><a href="#事件循环" class="headerlink" title="事件循环"></a>事件循环</h2><p>同步代码（同步任务）：<strong>立即</strong>放到<strong>JS引擎</strong>（JS主线程）执行，并<strong>原地等待</strong>结果。</p>
+<h2 id="事件循环"><a href="#事件循环" class="headerlink" title="事件循环"></a>事件循环</h2><p>同步代码（同步任务）：<strong>立即</strong>放到<strong>JS 引擎</strong>（JS 主线程）执行，并<strong>原地等待</strong>结果。</p>
 <p>异步代码（异步任务）：先放入<strong>宿主环境</strong>（浏览器&#x2F;Node），不必原地等待结果，并<strong>不阻塞</strong>主线程继续往下执行，异步结果在<strong>将来执行</strong>。</p>
 <p>异步代码有：</p>
 <ul>
 <li>定时器</li>
-<li>Ajax请求</li>
-<li>UI事件</li>
-<li>Promise的then（Promise本身是同步的）</li>
+<li>Ajax 请求</li>
+<li>UI 事件</li>
+<li>Promise 的 then（Promise 本身是同步的）</li>
 </ul>
 <iframe src="//player.bilibili.com/player.html?aid=360659668&bvid=BV1QX4y1H7uB&cid=1187954658&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 <p>总结：</p>
 <ol>
-<li>JS是单线程，为防止代码阻塞，把代码（任务）分成：同步和异步。</li>
-<li>同步代码给JS引擎执行，异步代码交给宿主环境。</li>
+<li>JS 是单线程，为防止代码阻塞，把代码（任务）分成：同步和异步。</li>
+<li>同步代码给 JS 引擎执行，异步代码交给宿主环境。</li>
 <li>同步代码放入执行栈中，异步代码等待时机成熟送入任务队列排队。</li>
 <li>执行栈执行完毕，会去任务队列看是否有异步任务，有就送到执行栈执行。反复循环查看执行，这个过程就是事件循环。</li>
 </ol>
-<h2 id="微任务和宏任务"><a href="#微任务和宏任务" class="headerlink" title="微任务和宏任务"></a>微任务和宏任务</h2><p>JS把<strong>异步任务</strong>分为宏任务和微任务。</p>
-<p>宏任务是由宿主（浏览器、Node）发起：script全部代码、setTimeout、setInterval、网络请求（Ajax&#x2F;Fetch）、事件。</p>
-<p>微任务是由JS引擎发起：Promise、Process.nextTick（Node独有）。</p>
+<h2 id="微任务和宏任务"><a href="#微任务和宏任务" class="headerlink" title="微任务和宏任务"></a>微任务和宏任务</h2><p>JS 把<strong>异步任务</strong>分为宏任务和微任务。</p>
+<p>宏任务是由宿主（浏览器、Node）发起：script 全部代码、setTimeout、setInterval、网络请求（Ajax&#x2F;Fetch）、事件。</p>
+<p>微任务是由 JS 引擎发起：Promise、Process.nextTick（Node 独有）。</p>
 <blockquote>
-<p>Promise本身同步，then&#x2F;catch的回调函数时异步的。</p>
+<p>Promise 本身同步，then&#x2F;catch 的回调函数时异步的。</p>
 </blockquote>
 <iframe src="//player.bilibili.com/player.html?aid=360687675&bvid=BV1FX4y1p7v1&cid=1189497305&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
@@ -431,6 +432,40 @@
 <li>到宏任务队列中找宏任务，放到执行栈中执行。直至宏任务队列中没有宏任务。</li>
 </ol>
 <p><a target="_blank" rel="noopener" href="https://www.jsv9000.app/">事件循环-微任务宏任务-练习网站</a></p>
+<h2 id="http-状态码有那些？分别代表是什么意思？"><a href="#http-状态码有那些？分别代表是什么意思？" class="headerlink" title="http 状态码有那些？分别代表是什么意思？"></a>http 状态码有那些？分别代表是什么意思？</h2><p>100 Continue 继续，一般在发送 post 请求时，已发送了 http header 之后服务端将返回此信息，表示确认，之后发送具体参数信息<br>200 OK 正常返回信息<br>201 Created 请求成功并且服务器创建了新的资源<br>202 Accepted 服务器已接受请求，但尚未处理</p>
+<p>301 Moved Permanently 请求的网页已永久移动到新位置。<br>302 Found 临时性重定向。<br>307 Internal Redirect 内部重定向</p>
+<p>304 Not Modified 自从上次请求后，请求的网页未修改过。 协商缓存<br>200 memory cache 强缓存</p>
+<p>400 Bad Request 服务器无法理解请求的格式，客户端不应当尝试再次使用相同的内容发起请求。<br>401 Unauthorized 请求未授权。<br>403 Forbidden 禁止访问。<br>404 Not Found 找不到如何与 URI 相匹配的资源。</p>
+<p>500 Internal Server Error 最常见的服务器端错误。<br>503 Service Unavailable 服务器端暂时无法处理请求（可能是过载或维护）。</p>
+<h2 id="一个页面从输入-URL-到页面加载显示完成，这个过程中都发生了什么？"><a href="#一个页面从输入-URL-到页面加载显示完成，这个过程中都发生了什么？" class="headerlink" title="一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？"></a>一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？</h2><ol>
+<li>浏览器查找域名对应的 IP 地址(DNS 查询：浏览器缓存-&gt;系统缓存-&gt;路由器缓存-&gt;ISP DNS 缓存-&gt;根域名服务器)</li>
+<li>浏览器向 Web 服务器发送一个 HTTP 请求（TCP 三次握手），如果是 HTTPS，多 9 次握手。</li>
+<li>服务器 301 重定向（从 <a target="_blank" rel="noopener" href="http://example.com/">http://example.com</a> 重定向到 <a target="_blank" rel="noopener" href="http://www.example.com)/">http://www.example.com）</a></li>
+<li>浏览器跟踪重定向地址，请求另一个带 www 的网址</li>
+<li>服务器处理请求（通过路由读取资源）</li>
+<li>服务器返回一个 HTTP 响应（报头中把 Content-type 设置为 ‘text&#x2F;html’）</li>
+<li>浏览器进 DOM 树构建</li>
+<li>浏览器发送请求获取嵌在 HTML 中的资源（如图片、音频、视频、CSS、JS 等）</li>
+<li>浏览器显示完成页面</li>
+<li>浏览器发送异步请求</li>
+</ol>
+<h2 id="前端攻击"><a href="#前端攻击" class="headerlink" title="前端攻击"></a>前端攻击</h2><p>一、CSRF（Cross-site request forgery）：跨站请求伪造。</p>
+<p>攻击者盗用普通用户的身份，以该用户的名义，向服务端发送恶意的请求。（例如以该用户的身份发帖，点赞，甚至银行交易）</p>
+<p><img src="/2023/06/interview-fontend-js/CSRF%E6%94%BB%E5%87%BB.drawio.png" alt="CSRF攻击原理"></p>
+<p>防御方法：</p>
+<ol>
+<li>尽量使用 POST 请求。</li>
+<li>加入验证码。</li>
+<li>验证 Referer。（Referer 是请求方域名）</li>
+<li>推荐：验证 token。客户端先问服务端要一个 token（服务端也会缓存这个 token），提交请求的时候连这个 token 一起给服务端。服务端接收到请求，验证 token 是否是自己生成的。如果是，则执行请求，并销毁当前 token，并给客户端一个新的 token.</li>
+</ol>
+<p>二、XSS（Cross-site scripting）跨站脚本攻击</p>
+<p>攻击者通过各种办法，在网站的页面上插入自己的脚本。普通用户访问该网站页面的时候，执行攻击者的脚本。（攻击者的脚本可以是把普通用户的 Cookie 发送到攻击者的网站）</p>
+<p>防御方法：</p>
+<ol>
+<li>服务端对接口请求参数做过滤。</li>
+<li>客户端对接口响应结果做 HTML 转义。</li>
+</ol>
 
     </div>
 
@@ -489,6 +524,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2023/07/interview-fontend-es6/" rel="next" title="面试题 - 前端 - ES6-ES13">
+                  面试题 - 前端 - ES6-ES13 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>

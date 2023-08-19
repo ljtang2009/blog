@@ -6,7 +6,7 @@
   <link href="https://www.tanglijin.top/atom.xml" rel="self"/>
   
   <link href="https://www.tanglijin.top/"/>
-  <updated>2023-07-08T10:01:51.410Z</updated>
+  <updated>2023-08-19T02:39:15.528Z</updated>
   <id>https://www.tanglijin.top/</id>
   
   <author>
@@ -17,11 +17,138 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>面试题 - 前端 - 微信小程序</title>
+    <link href="https://www.tanglijin.top/2023/08/interview-fontend-miniprogram/"/>
+    <id>https://www.tanglijin.top/2023/08/interview-fontend-miniprogram/</id>
+    <published>2023-08-04T01:08:00.000Z</published>
+    <updated>2023-08-19T02:39:15.528Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;简述微信小程序原理&quot;&gt;&lt;a href=&quot;#简述微信小程序原理&quot; class=&quot;headerlink&quot; title=&quot;简述微信小程序原理&quot;&gt;&lt;/a&gt;简述微信小程序原理&lt;/h2&gt;&lt;p&gt;微信小程序采用 &lt;code&gt;JavaScript&lt;/code&gt;、&lt;code&gt;WXML&lt;/code&gt;、&lt;code&gt;WXSS&lt;/code&gt; 三种技术进行开发,本质就是一个单页面应用，所有的页面渲染和事件处理，都在一个页面内进行，但又可以通过微信客户端调用原生的各种接口微信的架构，是数据驱动的架构模式，它的 &lt;code&gt;UI&lt;/code&gt; 和数据是分离的，所有的页面更新，都需要通过对数据的更改来实现 小程序分为两个部分 &lt;code&gt;webview&lt;/code&gt; 和 &lt;code&gt;appService&lt;/code&gt; 。其中 &lt;code&gt;webview&lt;/code&gt; 主要用来展现 &lt;code&gt;UI&lt;/code&gt; ，&lt;code&gt;appService&lt;/code&gt; 有来处理业务逻辑、数据及接口调用。它们在两个进程中运行，通过系统层 &lt;code&gt;JSBridge&lt;/code&gt; 实现通信，实现 &lt;code&gt;UI&lt;/code&gt; 的渲染、事件的处理&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="面试题-前端" scheme="https://www.tanglijin.top/categories/%E9%9D%A2%E8%AF%95%E9%A2%98-%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="面试题" scheme="https://www.tanglijin.top/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    <category term="前端" scheme="https://www.tanglijin.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="微信小程序" scheme="https://www.tanglijin.top/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试题 - 前端 - Vue</title>
+    <link href="https://www.tanglijin.top/2023/08/interview-fontend-vue/"/>
+    <id>https://www.tanglijin.top/2023/08/interview-fontend-vue/</id>
+    <published>2023-08-03T06:00:00.000Z</published>
+    <updated>2023-08-03T09:52:16.980Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;解释单向数据流和双向数据绑定&quot;&gt;&lt;a href=&quot;#解释单向数据流和双向数据绑定&quot; class=&quot;headerlink&quot; title=&quot;解释单向数据流和双向数据绑定&quot;&gt;&lt;/a&gt;解释单向数据流和双向数据绑定&lt;/h2&gt;&lt;p&gt;对于 Vue 来说，组件之间的数据传递具有单向数据流这样的特性称为单向数据流，单向数据流（Unidirectional data flow）方式使用一个上传数据流和一个下传数据流进行双向数据通信，两个数据流之间相互独立，单向数据流指只能从一个方向来修改状态。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="面试题-前端" scheme="https://www.tanglijin.top/categories/%E9%9D%A2%E8%AF%95%E9%A2%98-%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="面试题" scheme="https://www.tanglijin.top/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    <category term="前端" scheme="https://www.tanglijin.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="Vue" scheme="https://www.tanglijin.top/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试题 - 前端 - NodeJS</title>
+    <link href="https://www.tanglijin.top/2023/08/interview-fontend-nodejs/"/>
+    <id>https://www.tanglijin.top/2023/08/interview-fontend-nodejs/</id>
+    <published>2023-08-03T03:19:00.000Z</published>
+    <updated>2023-08-03T05:56:44.542Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;nodejs-创建静态服务器&quot;&gt;&lt;a href=&quot;#nodejs-创建静态服务器&quot; class=&quot;headerlink&quot; title=&quot;nodejs 创建静态服务器&quot;&gt;&lt;/a&gt;nodejs 创建静态服务器&lt;/h2&gt;&lt;p&gt;要使用 HTTP 服务器和客户端，则必须 &lt;code&gt;require(&amp;#39;http&amp;#39;)&lt;/code&gt;。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="面试题-前端" scheme="https://www.tanglijin.top/categories/%E9%9D%A2%E8%AF%95%E9%A2%98-%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="面试题" scheme="https://www.tanglijin.top/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    <category term="前端" scheme="https://www.tanglijin.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="Nodejs" scheme="https://www.tanglijin.top/tags/Nodejs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试题 - 前端 - 工程化&amp;代码管理</title>
+    <link href="https://www.tanglijin.top/2023/08/interview-fontend-project/"/>
+    <id>https://www.tanglijin.top/2023/08/interview-fontend-project/</id>
+    <published>2023-08-02T04:39:00.000Z</published>
+    <updated>2023-08-03T03:15:37.664Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;git-常用命令&quot;&gt;&lt;a href=&quot;#git-常用命令&quot; class=&quot;headerlink&quot; title=&quot;git 常用命令&quot;&gt;&lt;/a&gt;git 常用命令&lt;/h2&gt;&lt;p&gt;git init 初始化仓库&lt;/p&gt;
+&lt;p&gt;git status 查看当前各个区域的代码状态。&lt;/p&gt;
+&lt;p&gt;git log 查看 commit 记录&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="面试题-前端" scheme="https://www.tanglijin.top/categories/%E9%9D%A2%E8%AF%95%E9%A2%98-%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="面试题" scheme="https://www.tanglijin.top/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    <category term="前端" scheme="https://www.tanglijin.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="工程化" scheme="https://www.tanglijin.top/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+    <category term="代码管理" scheme="https://www.tanglijin.top/tags/%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试题 - 前端 - ES6-ES13</title>
+    <link href="https://www.tanglijin.top/2023/07/interview-fontend-es6/"/>
+    <id>https://www.tanglijin.top/2023/07/interview-fontend-es6/</id>
+    <published>2023-07-11T15:20:00.000Z</published>
+    <updated>2023-08-02T04:36:59.239Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;ER6-新增方法&quot;&gt;&lt;a href=&quot;#ER6-新增方法&quot; class=&quot;headerlink&quot; title=&quot;ER6 新增方法&quot;&gt;&lt;/a&gt;ER6 新增方法&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;let 和 const，解构赋值、模板字符串、箭头函数。&lt;/li&gt;
+&lt;li&gt;Symbol、Map、Set 三种常用的数据类型。&lt;/li&gt;
+&lt;li&gt;Proxy 重新定义了数据劫持的能力. （相对于 Object.defineProperty, Proxy 更多功能，例如可以劫持数组）。&lt;/li&gt;
+&lt;li&gt;Reflect 定义了一套标准化的数据操作的方式。&lt;/li&gt;
+&lt;li&gt;Promise 确实的解决了异步逻辑嵌套及回调地狱问题。定义了异步逻辑的三种状态 pending、rejected、fullfilled, 搭配 then、catch、all、race 等方法以及 async await 语法糖，大量简化了异步操作。&lt;/li&gt;
+&lt;li&gt;Generator 函数，可以将异步逻辑划片执行(async&amp;#x2F;await 是它的语法糖)。&lt;/li&gt;
+&lt;li&gt;新增了 class 类的概念&lt;/li&gt;
+&lt;li&gt;ES6 Modules</summary>
+    
+    
+    
+    <category term="面试题-前端" scheme="https://www.tanglijin.top/categories/%E9%9D%A2%E8%AF%95%E9%A2%98-%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="面试题" scheme="https://www.tanglijin.top/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    <category term="前端" scheme="https://www.tanglijin.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="ES6" scheme="https://www.tanglijin.top/tags/ES6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>面试题 - 前端 - JS</title>
     <link href="https://www.tanglijin.top/2023/06/interview-fontend-js/"/>
     <id>https://www.tanglijin.top/2023/06/interview-fontend-js/</id>
     <published>2023-06-30T02:51:00.000Z</published>
-    <updated>2023-07-08T10:01:51.410Z</updated>
+    <updated>2023-07-11T15:26:03.764Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;介绍-JS-有哪些内置对象？&quot;&gt;&lt;a href=&quot;#介绍-JS-有哪些内置对象？&quot; class=&quot;headerlink&quot; title=&quot;介绍 JS 有哪些内置对象？&quot;&gt;&lt;/a&gt;介绍 JS 有哪些内置对象？&lt;/h2&gt;&lt;ul&gt;
@@ -463,158 +590,6 @@
 &lt;td align=&quot;center&quot;&gt;export 只是对当前容器的文件系统快照进行导出，会丢弃原镜像的所有历史记录与原数据信息。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;&lt;/table&gt;</summary>
-    
-    
-    
-    <category term="Docker 学习" scheme="https://www.tanglijin.top/categories/Docker-%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="Docker" scheme="https://www.tanglijin.top/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker 学习 5. 容器退出命令</title>
-    <link href="https://www.tanglijin.top/2023/05/docker-study-5/"/>
-    <id>https://www.tanglijin.top/2023/05/docker-study-5/</id>
-    <published>2023-05-11T06:54:00.000Z</published>
-    <updated>2023-06-07T04:24:01.257Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;details class=&quot;note info no-icon&quot;&gt;&lt;summary&gt;&lt;p&gt;目录&lt;/p&gt;
-&lt;/summary&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-1/&quot; title=&quot;Docker 学习 1.</summary>
-        
-      
-    
-    
-    
-    <category term="Docker 学习" scheme="https://www.tanglijin.top/categories/Docker-%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="Docker" scheme="https://www.tanglijin.top/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker 学习 4. Docker引擎架构</title>
-    <link href="https://www.tanglijin.top/2023/05/docker-study-4/"/>
-    <id>https://www.tanglijin.top/2023/05/docker-study-4/</id>
-    <published>2023-05-11T01:43:00.000Z</published>
-    <updated>2023-06-07T04:24:01.250Z</updated>
-    
-    
-    <summary type="html">&lt;details class=&quot;note info no-icon&quot;&gt;&lt;summary&gt;&lt;p&gt;目录&lt;/p&gt;
-&lt;/summary&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-1/&quot; title=&quot;Docker 学习 1. 原理&quot;&gt;Docker 学习 1. 原理&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-2/&quot; title=&quot;Docker 学习 2. 常用命令&quot;&gt;Docker 学习 2. 常用命令&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-3/&quot; title=&quot;Docker 学习 3. 编写 Dockerfile&quot;&gt;Docker 学习 3. 编写 Dockerfile&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-4/&quot; title=&quot;Docker 学习 4. Docker引擎架构&quot;&gt;Docker 学习 4. Docker引擎架构&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-5/&quot; title=&quot;Docker 学习 5. 容器退出命令&quot;&gt;Docker 学习 5. 容器退出命令&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-6/&quot; title=&quot;Docker 学习 6. 镜像导入导出和容器导入导出的区别&quot;&gt;Docker 学习 6. 镜像导入导出和容器导入导出的区别&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-7/&quot; title=&quot;Docker 学习 7. Docker Cache&quot;&gt;Docker 学习 7. Docker Cache&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-8/&quot; title=&quot;Docker 学习 8. 数据卷持久化&quot;&gt;Docker 学习 8. 数据卷持久化&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/05/docker-study-9/&quot; title=&quot;Docker 学习 9. Docker 本地网络&quot;&gt;Docker 学习 9. Docker 本地网络&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/details&gt;
-
-
-&lt;p&gt;Docker&lt;strong&gt;现代&lt;/strong&gt;架构由五部分构成：Docker Client、Dockerd、Containerd、Runc 和 Shim：&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Docker 学习" scheme="https://www.tanglijin.top/categories/Docker-%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="Docker" scheme="https://www.tanglijin.top/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Macos 杀掉占用某个端口的进程</title>
-    <link href="https://www.tanglijin.top/2022/12/mac-kill-process/"/>
-    <id>https://www.tanglijin.top/2022/12/mac-kill-process/</id>
-    <published>2023-04-01T00:23:00.000Z</published>
-    <updated>2023-06-07T04:24:01.232Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Macos" scheme="https://www.tanglijin.top/tags/Macos/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Macos 查看硬盘已读写情况</title>
-    <link href="https://www.tanglijin.top/2023/03/macos-sdd-health/"/>
-    <id>https://www.tanglijin.top/2023/03/macos-sdd-health/</id>
-    <published>2023-03-30T02:29:00.000Z</published>
-    <updated>2023-06-07T04:24:01.250Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;下载 &lt;a href=&quot;https://www.smartmontools.org/&quot;&gt;smartmontools&lt;/a&gt; (官网有下载链接)。&lt;/li&gt;
-&lt;li&gt;安装。&lt;/li&gt;
-&lt;li&gt;命令行输入:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Macos" scheme="https://www.tanglijin.top/tags/Macos/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker 学习 3. 编写 Dockerfile</title>
-    <link href="https://www.tanglijin.top/2023/03/docker-study-3/"/>
-    <id>https://www.tanglijin.top/2023/03/docker-study-3/</id>
-    <published>2023-03-23T09:20:00.000Z</published>
-    <updated>2023-06-07T04:24:01.250Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;details class=&quot;note info no-icon&quot;&gt;&lt;summary&gt;&lt;p&gt;目录&lt;/p&gt;
-&lt;/summary&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;/2023/03/docker-study-1/&quot; title=&quot;Docker 学习 1.</summary>
-        
-      
     
     
     
