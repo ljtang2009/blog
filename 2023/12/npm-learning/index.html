@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/downloads/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/downloads/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/downloads/images/favicon/favicon-16x16.png">
+  <link rel="mask-icon" href="/downloads/images/favicon/favicon.svg" color="#222">
+  <meta name="google-site-verification" content="_2OctYreBeDkfTRiEHaXwB0wYaMK6F84qG97fNjM4qc">
+  <meta name="msvalidate.01" content="84BDF5B17B36630CC4297E351B2B0D64">
+  <meta name="baidu-site-verification" content="code-kuUu52WEwj">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.tanglijin.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"style":"flat","show_result":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":true,"nav":{"utterances":{"order":-1},"changyan":{"text":"畅言","order":0},"livere":{"text":"来必力","order":1},"valine":{"order":2},"disqus":{"order":3},"disqusjs":{"order":4},"gitalk":{"order":5},"giscus":{"order":6}},"activeClass":"utterances"},"stickytabs":true,"motion":{"enable":true,"async":true,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"HWL3YK5R6C","apiKey":"17ce0bb5e5dc71bf5e3e37006cc05b55","indexName":"blog","hits":{"per_page":10}}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="npm 是世界上最大的软件注册表。来自各大洲的开源开发人员都使用 npm 来共享和借用包，许多组织也使用 npm 来管理私有开发。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NPM学习笔记">
+<meta property="og:url" content="https://www.tanglijin.top/2023/12/npm-learning/index.html">
+<meta property="og:site_name" content="唐李锦的空间">
+<meta property="og:description" content="npm 是世界上最大的软件注册表。来自各大洲的开源开发人员都使用 npm 来共享和借用包，许多组织也使用 npm 来管理私有开发。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-12-08T01:07:00.000Z">
+<meta property="article:modified_time" content="2023-12-25T05:58:12.090Z">
+<meta property="article:author" content="唐李锦">
+<meta property="article:tag" content="NPM">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.tanglijin.top/2023/12/npm-learning/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.tanglijin.top/2023/12/npm-learning/","path":"2023/12/npm-learning/","title":"NPM学习笔记"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>NPM学习笔记 | 唐李锦的空间</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSZ6XMJ0XL"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-WSZ6XMJ0XL","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?85df606204b9d08c7ff41bedceef09f7"></script>
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="唐李锦的空间" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">唐李锦的空间</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">79</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">18</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">85</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li><li class="menu-item menu-item-友情链接"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友情链接</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container">
+  <div class="algolia-stats"><hr></div>
+  <div class="algolia-hits"></div>
+  <div class="algolia-pagination"></div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">设置代理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E-Https"><span class="nav-number">2.1.</span> <span class="nav-text">关于 Https</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%96%E6%B6%88%E4%BB%A3%E7%90%86"><span class="nav-number">2.2.</span> <span class="nav-text">取消代理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC"><span class="nav-number">3.</span> <span class="nav-text">运行脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%83%E7%94%A8-package-json-%E7%9A%84%E5%8F%82%E6%95%B0"><span class="nav-number">3.1.</span> <span class="nav-text">调用 package.json 的参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0"><span class="nav-number">3.2.</span> <span class="nav-text">传递参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%84%9A%E6%9C%AC%E5%90%8E%E8%84%9A%E6%9C%AC"><span class="nav-number">3.3.</span> <span class="nav-text">前脚本后脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-number">3.4.</span> <span class="nav-text">生命周期</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0-NPM-%E7%89%88%E6%9C%AC"><span class="nav-number">4.</span> <span class="nav-text">更新 NPM 版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE-init-%E5%91%BD%E4%BB%A4%E7%9A%84%E9%85%8D%E7%BD%AE%E9%80%89%E9%A1%B9"><span class="nav-number">5.</span> <span class="nav-text">设置 init 命令的配置选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E5%AE%9A-dependencies-%E5%92%8C-devDependencies"><span class="nav-number">6.</span> <span class="nav-text">指定 dependencies 和 devDependencies</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E5%90%AF"><span class="nav-number">7.</span> <span class="nav-text">重启</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npmrc"><span class="nav-number">8.</span> <span class="nav-text">npmrc</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%8F%E4%B8%AA%E9%A1%B9%E7%9B%AE%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">8.1.</span> <span class="nav-text">每个项目的配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%8F%E4%B8%AA%E5%B7%A5%E4%BD%9C%E5%8C%BA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">8.2.</span> <span class="nav-text">每个工作区配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%8F%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">8.3.</span> <span class="nav-text">每用户配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">8.4.</span> <span class="nav-text">全局配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">8.5.</span> <span class="nav-text">环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E9%80%89%E9%A1%B9"><span class="nav-number">8.6.</span> <span class="nav-text">命令行选项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cnpm"><span class="nav-number">8.7.</span> <span class="nav-text">cnpm</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#store-dir"><span class="nav-number">8.7.1.</span> <span class="nav-text">store-dir</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#package-json"><span class="nav-number">9.</span> <span class="nav-text">package.json</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#name"><span class="nav-number">9.1.</span> <span class="nav-text">name</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#version"><span class="nav-number">9.2.</span> <span class="nav-text">version</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#files"><span class="nav-number">9.3.</span> <span class="nav-text">files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#main"><span class="nav-number">9.4.</span> <span class="nav-text">main</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#config"><span class="nav-number">9.5.</span> <span class="nav-text">config</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#engines"><span class="nav-number">9.6.</span> <span class="nav-text">engines</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#os"><span class="nav-number">9.7.</span> <span class="nav-text">os</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cpu"><span class="nav-number">9.8.</span> <span class="nav-text">cpu</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#package-lock-json"><span class="nav-number">10.</span> <span class="nav-text">package-lock.json</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm-shrinkwrap-json"><span class="nav-number">11.</span> <span class="nav-text">npm-shrinkwrap.json</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E5%8C%BA"><span class="nav-number">12.</span> <span class="nav-text">工作区</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="唐李锦"
+      src="/downloads/images/avatar.png">
+  <p class="site-author-name" itemprop="name">唐李锦</p>
+  <div class="site-description" itemprop="description">我的名字叫唐李锦，这是我的空间。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">85</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">79</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="/downloads/images/wechat.png" title="微信 → &#x2F;downloads&#x2F;images&#x2F;wechat.png" rel="noopener me"><i class="fa fa-comments fa-fw"></i>微信</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/ljtang2009" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ljtang2009" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:ho_ho_gl@hotmail.com" title="E-Mail → mailto:ho_ho_gl@hotmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.tanglijin.top/2023/12/npm-learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/downloads/images/avatar.png">
+      <meta itemprop="name" content="唐李锦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="唐李锦的空间">
+      <meta itemprop="description" content="我的名字叫唐李锦，这是我的空间。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="NPM学习笔记 | 唐李锦的空间">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          NPM学习笔记
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-12-08 09:07:00" itemprop="dateCreated datePublished" datetime="2023-12-08T09:07:00+08:00">2023-12-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-12-25 13:58:12" itemprop="dateModified" datetime="2023-12-25T13:58:12+08:00">2023-12-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/NPM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">NPM学习笔记</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>npm 是世界上最大的软件注册表。来自各大洲的开源开发人员都使用 npm 来共享和借用包，许多组织也使用 npm 来管理私有开发。</p>
+<span id="more"></span>
+
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">npm login #   登录</span><br><span class="line">npm whoami #   查看当前登录用户</span><br><span class="line">npm profile get # 查看当前用户信息。修改当前用户信息参考： https://docs.npmjs.com/managing-your-profile-settings</span><br><span class="line">npm install npm@latest -g # 升级npm</span><br><span class="line">npm -v # 查看npm版本</span><br><span class="line"></span><br><span class="line">npm outdated # 查看所有已安装的包是否有更新</span><br><span class="line">npm update # 更新所有已安装的包</span><br><span class="line">npm update &lt;package&gt; # 更新指定包</span><br><span class="line">npm update -g # 更新全局安装的包</span><br><span class="line">npm update -g &lt;package&gt; # 更新全局安装的指定包</span><br><span class="line">npm outdated -g # 查看全局安装的包是否有更新</span><br><span class="line">npm update -g &lt;package&gt; # 更新全局安装的指定包</span><br><span class="line"></span><br><span class="line">npm uninstall # 卸载所有已安装的包</span><br><span class="line">npm uninstall &lt;package&gt; # 卸载指定包</span><br><span class="line">npm uninstall -g # 卸载全局安装的包</span><br><span class="line">npm uninstall -g &lt;package&gt; # 卸载全局安装的指定包</span><br><span class="line"></span><br><span class="line">npm audit # 查看安全漏洞</span><br><span class="line">npm audit fix # 扫描项目以查找漏洞，并自动为易受攻击的依赖项安装任何兼容的更新</span><br><span class="line">npm audit fix --force # 强制修复安全漏洞</span><br><span class="line">npm audit fix --package-lock-only # 只修复 package-lock.json 中的安全漏洞</span><br><span class="line"></span><br><span class="line">npm cache add &lt;package-spec&gt; # 将包添加到缓存</span><br><span class="line">npm cache clean [&lt;key&gt;] # 清除缓存。请注意，这通常是不必要的，因为 npm 的缓存是自我修复的，并且能够抵抗数据损坏问题。除了回收磁盘空间之外，永远不需要出于任何原因清除缓存。</span><br><span class="line">npm cache ls [&lt;name&gt;@&lt;version&gt;] # 列出缓存中的包</span><br><span class="line">npm cache verify # 验证缓存的包</span><br><span class="line"></span><br><span class="line">npm ci # 类似于 npm install，主要用于自动化平台。1. 项目必须具有现有的 package-lock.json。2. 如果 package-lock.json 与 package.json 依赖项不匹配，npm ci 将退出并显示错误。3. npm ci 一次只能安装整个项目，不能添加单个依赖项。4. 自动删除已存在的 node_modules。5. npm ci 永远不会写入 package.json 或 package-lock.json。</span><br><span class="line"></span><br><span class="line">npm config set &lt;key&gt;=&lt;value&gt; [&lt;key&gt;=&lt;value&gt; ...] # 设置 npm 配置项</span><br><span class="line">npm config get [&lt;key&gt; [&lt;key&gt; ...]] # 获取 npm 配置项</span><br><span class="line">npm config delete &lt;key&gt; [&lt;key&gt; ...] # 删除 npm 配置项</span><br><span class="line">npm config list [--json] # 列出 npm 配置项</span><br><span class="line">npm config ls -l # 列出 npm 内部的配置项</span><br><span class="line">npm config edit # 编辑 npm 配置项</span><br><span class="line">npm config fix # 修复 npm 配置项</span><br><span class="line"></span><br><span class="line">npm dedupe # 递归地删除重复的依赖项</span><br><span class="line"></span><br><span class="line">npm doctor # 检查 npm 配置</span><br><span class="line"></span><br><span class="line">npm outdated [&lt;package-spec&gt; ...] # 列出所有已安装的包是否有更新</span><br><span class="line"></span><br><span class="line">npx # 运行 npm 包的无需安装的可执行文件</span><br><span class="line"></span><br><span class="line">pnpm store path # 查看 pnpm 返回活跃的存储目录的路径</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置代理"><a href="#设置代理" class="headerlink" title="设置代理"></a>设置代理</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set proxy http://username:password@server:port</span><br></pre></td></tr></table></figure>
+
+<h3 id="关于-Https"><a href="#关于-Https" class="headerlink" title="关于 Https"></a>关于 Https</h3><p>经过上面设置使用了 http 开头的源，因此不需要设 https_proxy 了，否则还要增加一句:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set https-proxy http://username:password@server:port</span><br></pre></td></tr></table></figure>
+
+<h3 id="取消代理"><a href="#取消代理" class="headerlink" title="取消代理"></a>取消代理</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config delete proxy</span><br><span class="line">npm config delete https-proxy</span><br></pre></td></tr></table></figure>
+
+<h2 id="运行脚本"><a href="#运行脚本" class="headerlink" title="运行脚本"></a>运行脚本</h2><h3 id="调用-package-json-的参数"><a href="#调用-package-json-的参数" class="headerlink" title="调用 package.json 的参数"></a>调用 package.json 的参数</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;config&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;test_key&quot;</span><span class="punctuation">:</span> <span class="string">&quot;123abc&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;show-test-key&quot;</span><span class="punctuation">:</span> <span class="string">&quot;echo $npm_package_config_test_key&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="传递参数"><a href="#传递参数" class="headerlink" title="传递参数"></a>传递参数</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;xo&quot;</span><span class="punctuation">:</span> <span class="string">&quot;xo&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;xo:fix&quot;</span><span class="punctuation">:</span> <span class="string">&quot;npm run xo -- --fix&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>Adding the <code>-- --fix</code>  option is like executing <code>xo --fix</code>.</p>
+<h3 id="前脚本后脚本"><a href="#前脚本后脚本" class="headerlink" title="前脚本后脚本"></a>前脚本后脚本</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;pretest&quot;</span><span class="punctuation">:</span> <span class="string">&quot;echo &#x27;This runs before the test script.&#x27;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;test&quot;</span><span class="punctuation">:</span> <span class="string">&quot;echo &#x27;This is the test script.&#x27;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;posttest&quot;</span><span class="punctuation">:</span> <span class="string">&quot;echo &#x27;This runs after the test script.&#x27;&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>在此示例 npm run test 中，将按所述执行这些脚本。</p>
+<p>与 pnpm 不同，pnpm 不会执行前后脚本，参考 <a target="_blank" rel="noopener" href="https://pnpm.io/zh/cli/run#%E4%B8%8E-npm-run%E7%9A%84%E4%B8%8D%E5%90%8C%E4%B9%8B%E5%A4%84">https://pnpm.io/zh/cli/run#%E4%B8%8E-npm-run%E7%9A%84%E4%B8%8D%E5%90%8C%E4%B9%8B%E5%A4%84</a></p>
+<h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><p>参考 <a target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/v10/using-npm/scripts#life-cycle-operation-order">https://docs.npmjs.com/cli/v10/using-npm/scripts#life-cycle-operation-order</a></p>
+<h2 id="更新-NPM-版本"><a href="#更新-NPM-版本" class="headerlink" title="更新 NPM 版本"></a>更新 NPM 版本</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g npm@latest</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置-init-命令的配置选项"><a href="#设置-init-命令的配置选项" class="headerlink" title="设置 init 命令的配置选项"></a>设置 init 命令的配置选项</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm set init-author-email &quot;example-user@example.com&quot;</span><br><span class="line">npm set init-author-name &quot;example_user&quot;</span><br><span class="line">npm set init-license &quot;MIT&quot;</span><br><span class="line"></span><br><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
+
+<h2 id="指定-dependencies-和-devDependencies"><a href="#指定-dependencies-和-devDependencies" class="headerlink" title="指定 dependencies 和 devDependencies"></a>指定 dependencies 和 devDependencies</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">指定 dependencies</span></span><br><span class="line">npm install &lt;package-name&gt; [--save-prod]</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">指定 devDependencies</span></span><br><span class="line">npm install &lt;package-name&gt; [--save-dev]</span><br></pre></td></tr></table></figure>
+
+<h2 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm restart</span><br></pre></td></tr></table></figure>
+
+<p>如果当前项目具有 中 package.json 指定的脚本，则将运行以下 “restart” 脚本：</p>
+<ol>
+<li>prerestart</li>
+<li>restart</li>
+<li>postrestart</li>
+</ol>
+<p>如果它没有指定脚本 “restart” ，但它确实有 stop and&#x2F;或 start 脚本，则将运行以下脚本：</p>
+<ol>
+<li>prerestart</li>
+<li>prestop</li>
+<li>stop</li>
+<li>poststop</li>
+<li>prestart</li>
+<li>start</li>
+<li>poststart</li>
+<li>postrestart</li>
+</ol>
+<h2 id="npmrc"><a href="#npmrc" class="headerlink" title="npmrc"></a>npmrc</h2><p>npm 从命令行、环境变量和 <code>npmrc</code> 文件中获取其配置设置。</p>
+<h3 id="每个项目的配置文件"><a href="#每个项目的配置文件" class="headerlink" title="每个项目的配置文件"></a>每个项目的配置文件</h3><p>在项目中本地工作时，项目根目录中 <code>.npmrc</code> 的文件（即 <code>node_modules</code> 和 <code>package.json</code> 的同级）将设置特定于此项目的配置值。</p>
+<p>请注意，这仅适用于运行 npm 的项目的根目录。当您的模块发布时，它不起作用。例如，您不能发布强制自身全局安装或安装在其他位置的模块。</p>
+<p>此外，在全局模式下不会读取此文件，例如在运行 <code>npm install -g</code> 时。</p>
+<h3 id="每个工作区配置文件"><a href="#每个工作区配置文件" class="headerlink" title="每个工作区配置文件"></a>每个工作区配置文件</h3><p>pnpm 的特性，包含 pnpm-workspace.yaml 文件的目录。</p>
+<h3 id="每用户配置文件"><a href="#每用户配置文件" class="headerlink" title="每用户配置文件"></a>每用户配置文件</h3><p><code>$HOME/.npmrc</code> （或 <code>userconfig</code> 参数，如果在环境或命令行中设置）。</p>
+<h3 id="全局配置文件"><a href="#全局配置文件" class="headerlink" title="全局配置文件"></a>全局配置文件</h3><p><code>$PREFIX/etc/npmrc</code> （或 <code>globalconfig</code> 参数，如果在环境或命令行中设置）。</p>
+<h3 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h3><p><code>npm_config_</code> 前缀的环境变量将覆盖 <code>npmrc</code> 文件中的任何设置。</p>
+<h3 id="命令行选项"><a href="#命令行选项" class="headerlink" title="命令行选项"></a>命令行选项</h3><p><code>npm config set</code> 命令将覆盖 <code>npmrc</code> 文件中的任何设置。</p>
+<h3 id="cnpm"><a href="#cnpm" class="headerlink" title="cnpm"></a>cnpm</h3><h4 id="store-dir"><a href="#store-dir" class="headerlink" title="store-dir"></a>store-dir</h4><p>所有包被保存在磁盘上的位置。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set store-dir ~/.pnpm-store</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>默认值：<ul>
+<li>If the $PNPM_HOME env variable is set, then $PNPM_HOME&#x2F;store</li>
+<li>如果设置了 $XDG_DATA_HOME 环境变量，则为 $XDG_DATA_HOME&#x2F;pnpm&#x2F;store</li>
+<li>在 Windows 上: ~&#x2F;AppData&#x2F;Local&#x2F;pnpm&#x2F;store</li>
+<li>在 macOS 上: ~&#x2F;Library&#x2F;pnpm&#x2F;store</li>
+<li>在 Linux 上: ~&#x2F;.local&#x2F;share&#x2F;pnpm&#x2F;store</li>
+</ul>
+</li>
+<li>类型：path</li>
+</ul>
+<h2 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h2><h3 id="name"><a href="#name" class="headerlink" title="name"></a>name</h3><ul>
+<li>名称必须小于或等于 214 个字符。这包括作用域包的作用域。</li>
+<li>作用域包的名称可以以点或下划线开头。如果没有范围，这是不允许的。</li>
+<li>新包的名称中不得包含大写字母。</li>
+<li>该名称最终成为 URL 的一部分、命令行上的参数和文件夹名称。因此，名称不能包含任何非 URL 安全字符。</li>
+<li>不要使用与核心 Node 模块相同的名称。</li>
+<li>不要在名称中加入“js”或“node”。</li>
+<li>该名称可能会作为参数传递给 require（），因此它应该简短，但也具有合理的描述性。</li>
+<li>在你过于依恋它之前，你可能想检查一下 <code>https://www.npmjs.com</code>，看看是否已经有这个名字的东西。</li>
+</ul>
+<h3 id="version"><a href="#version" class="headerlink" title="version"></a>version</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install semver</span><br></pre></td></tr></table></figure>
+
+<h3 id="files"><a href="#files" class="headerlink" title="files"></a>files</h3><p>可选。类似<code>.gitignore</code>语法。</p>
+<p><code>.npmignore</code>文件可以排除文件。</p>
+<h3 id="main"><a href="#main" class="headerlink" title="main"></a>main</h3><p>main 字段是一个模块 ID，它是程序的主要入口点。也就是说，如果您的软件包被命名为 foo ，并且用户安装了它，然后进行了 <code>require(&quot;foo&quot;)</code> 安装，则将返回主模块的导出对象。</p>
+<p>如果 <code>main</code> 未设置，则默认位于 <code>index.js</code> 包的根文件夹中。</p>
+<h3 id="config"><a href="#config" class="headerlink" title="config"></a>config</h3><p>“config”对象可用于设置包脚本中使用的配置参数，这些参数在升级后保持不变。例如，如果一个包包含以下内容：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;foo&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;config&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;port&quot;</span><span class="punctuation">:</span> <span class="string">&quot;8080&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>可以用 <code>npm_package_config_port</code> 引用。</p>
+<h3 id="engines"><a href="#engines" class="headerlink" title="engines"></a>engines</h3><p>您可以指定您的内容所使用的 node 或 npm 版本：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;engines&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;node&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&gt;=0.10.3 &lt;15&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;npm&quot;</span><span class="punctuation">:</span> <span class="string">&quot;~1.0.20&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>除非用户设置了 <code>engine-strict</code> 配置标志，否则此字段仅是建议字段，并且仅在包作为依赖项安装时才会生成警告。</p>
+<h3 id="os"><a href="#os" class="headerlink" title="os"></a>os</h3><p>您可以指定模块将在哪些操作系统上运行：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;os&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;darwin&quot;</span><span class="punctuation">,</span> <span class="string">&quot;linux&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;os&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;!win32&quot;</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>主机操作系统由以下因素 <code>process.platform</code> 决定。</p>
+<h3 id="cpu"><a href="#cpu" class="headerlink" title="cpu"></a>cpu</h3><p>如果您的代码仅在某些 CPU 架构上运行，您可以指定哪些架构。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;cpu&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;x64&quot;</span><span class="punctuation">,</span> <span class="string">&quot;ia32&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;cpu&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;!arm&quot;</span><span class="punctuation">,</span> <span class="string">&quot;!mips&quot;</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>主机体系结构由以下因素 <code>process.arch</code> 决定</p>
+<h2 id="package-lock-json"><a href="#package-lock-json" class="headerlink" title="package-lock.json"></a>package-lock.json</h2><p><code>package-lock.json</code> 对于 npm 修改树或 <code>node_modules</code> <code>package.json</code> .它描述了生成的确切树，以便后续安装能够生成相同的树，而不考虑中间依赖项更新。</p>
+<h2 id="npm-shrinkwrap-json"><a href="#npm-shrinkwrap-json" class="headerlink" title="npm-shrinkwrap.json"></a>npm-shrinkwrap.json</h2><p>区别在于 <code>package-lock.json</code> 无法发布，如果在根项目以外的任何地方找到它，它将被忽略。</p>
+<p>相比之下，<code>npm-shrinkwrap.json</code> 允许发布，并从遇到的点定义依赖关系树。除非部署 CLI 工具或以其他方式使用发布过程来生成生产包，否则不建议这样做。</p>
+<p>如果 和 <code>npm-shrinkwrap.json</code> 都 <code>package-lock.json</code> 存在于项目的根目录中， <code>npm-shrinkwrap.json</code> 则优先 package-lock.json 并被忽略。</p>
+<h2 id="工作区"><a href="#工作区" class="headerlink" title="工作区"></a>工作区</h2><p>参考 <a target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/v10/using-npm/workspaces">https://docs.npmjs.com/cli/v10/using-npm/workspaces</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/downloads/images/reward/wechatpay.png" alt="唐李锦 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/downloads/images/reward/alipay.png" alt="唐李锦 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>唐李锦
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.tanglijin.top/2023/12/npm-learning/" title="NPM学习笔记">https://www.tanglijin.top/2023/12/npm-learning/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/NPM/" rel="tag"><i class="fa fa-tag"></i> NPM</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/09/interview-fontend-arithmetic-sort-tongpaixu/" rel="prev" title="面试题 - 前端 - 算法 - 排序 - 桶排序">
+                  <i class="fa fa-chevron-left"></i> 面试题 - 前端 - 算法 - 排序 - 桶排序
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/12/node-version-switching/" rel="next" title="NodeJS 版本切换">
+                  NodeJS 版本切换 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2022 – 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">唐李锦</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/4.17.1/algoliasearch-lite.umd.js" integrity="sha256-F7emIId74fYoGrHzsnu3iClRHIbBMhMCbxDoA1cfMAY=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.56.1/instantsearch.production.min.js" integrity="sha256-lz9C+x8+6w2rh56x5TrH5iYmE4Js2FiJS5h0tuMz7hQ=" crossorigin="anonymous"></script><script src="/js/third-party/search/algolia-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"ljtang2009/blog","issue_term":"pathname","theme":"preferred-color-scheme","label":"Utteranc"}</script>
+<script src="/js/third-party/comments/utterances.js"></script>
+
+</body>
+</html>

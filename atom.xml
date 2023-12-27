@@ -6,7 +6,7 @@
   <link href="https://www.tanglijin.top/atom.xml" rel="self"/>
   
   <link href="https://www.tanglijin.top/"/>
-  <updated>2023-09-28T00:35:09.901Z</updated>
+  <updated>2023-12-24T11:35:39.565Z</updated>
   <id>https://www.tanglijin.top/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NPM 镜像切换</title>
+    <link href="https://www.tanglijin.top/2023/12/npm-mirror-switching/"/>
+    <id>https://www.tanglijin.top/2023/12/npm-mirror-switching/</id>
+    <published>2023-12-24T11:25:00.000Z</published>
+    <updated>2023-12-24T11:35:39.565Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本文介绍 NPM 镜像切换的方法。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="NPM" scheme="https://www.tanglijin.top/tags/NPM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NodeJS 版本切换</title>
+    <link href="https://www.tanglijin.top/2023/12/node-version-switching/"/>
+    <id>https://www.tanglijin.top/2023/12/node-version-switching/</id>
+    <published>2023-12-11T11:07:00.000Z</published>
+    <updated>2023-12-11T14:28:05.663Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本文介绍 Node.js 版本切换方法&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Node.js" scheme="https://www.tanglijin.top/tags/Node-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NPM学习笔记</title>
+    <link href="https://www.tanglijin.top/2023/12/npm-learning/"/>
+    <id>https://www.tanglijin.top/2023/12/npm-learning/</id>
+    <published>2023-12-08T01:07:00.000Z</published>
+    <updated>2023-12-25T05:58:12.090Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;npm 是世界上最大的软件注册表。来自各大洲的开源开发人员都使用 npm 来共享和借用包，许多组织也使用 npm 来管理私有开发。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="NPM学习笔记" scheme="https://www.tanglijin.top/categories/NPM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="NPM" scheme="https://www.tanglijin.top/tags/NPM/"/>
+    
+  </entry>
   
   <entry>
     <title>面试题 - 前端 - 算法 - 排序 - 桶排序</title>
@@ -289,11 +342,11 @@
   </entry>
   
   <entry>
-    <title>面试题 - 前端 - NodeJS</title>
+    <title>面试题 - 前端 - Node.js</title>
     <link href="https://www.tanglijin.top/2023/08/interview-fontend-nodejs/"/>
     <id>https://www.tanglijin.top/2023/08/interview-fontend-nodejs/</id>
     <published>2023-08-03T03:19:00.000Z</published>
-    <updated>2023-08-03T05:56:44.542Z</updated>
+    <updated>2023-12-11T11:10:39.230Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;nodejs-创建静态服务器&quot;&gt;&lt;a href=&quot;#nodejs-创建静态服务器&quot; class=&quot;headerlink&quot; title=&quot;nodejs 创建静态服务器&quot;&gt;&lt;/a&gt;nodejs 创建静态服务器&lt;/h2&gt;&lt;p&gt;要使用 HTTP 服务器和客户端，则必须 &lt;code&gt;require(&amp;#39;http&amp;#39;)&lt;/code&gt;。&lt;/p&gt;</summary>
@@ -303,11 +356,11 @@
     <category term="面试题-前端" scheme="https://www.tanglijin.top/categories/%E9%9D%A2%E8%AF%95%E9%A2%98-%E5%89%8D%E7%AB%AF/"/>
     
     
+    <category term="Node.js" scheme="https://www.tanglijin.top/tags/Node-js/"/>
+    
     <category term="面试题" scheme="https://www.tanglijin.top/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
     <category term="前端" scheme="https://www.tanglijin.top/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="Nodejs" scheme="https://www.tanglijin.top/tags/Nodejs/"/>
     
   </entry>
   
@@ -480,63 +533,6 @@
     
     
     <category term="Docker" scheme="https://www.tanglijin.top/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VSCode 功能推荐 - 对多目录搜索包含和排除目录</title>
-    <link href="https://www.tanglijin.top/2023/06/vscode-feature-sticky-scroll/"/>
-    <id>https://www.tanglijin.top/2023/06/vscode-feature-sticky-scroll/</id>
-    <published>2023-06-06T05:41:10.000Z</published>
-    <updated>2023-06-07T04:24:01.273Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;当在Search视图的结果树视图中右键单击文件夹时，上下文菜单中现在有两个新选项。&lt;a href=&quot;https://code.visualstudio.com/updates/v1_73#_include-and-exclude-folders-from-search&quot;&gt;官网介绍&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="VSCode 功能推荐" scheme="https://www.tanglijin.top/categories/VSCode-%E5%8A%9F%E8%83%BD%E6%8E%A8%E8%8D%90/"/>
-    
-    
-    <category term="VSCode" scheme="https://www.tanglijin.top/tags/VSCode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VSCode 技巧 - 基础</title>
-    <link href="https://www.tanglijin.top/2023/05/vscode-skill-basic/"/>
-    <id>https://www.tanglijin.top/2023/05/vscode-skill-basic/</id>
-    <published>2023-05-29T00:26:10.000Z</published>
-    <updated>2023-06-07T04:24:01.273Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;strong&gt;声明： 本文档信息来源于&lt;a href=&quot;https://code.visualstudio.com/docs&quot;&gt;VSCode官方文档&lt;/a&gt;。&lt;/strong&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="VSCode 技巧" scheme="https://www.tanglijin.top/categories/VSCode-%E6%8A%80%E5%B7%A7/"/>
-    
-    
-    <category term="VSCode" scheme="https://www.tanglijin.top/tags/VSCode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VSCode 使用 - 编辑器 Editor</title>
-    <link href="https://www.tanglijin.top/2023/05/vscode-help-editor/"/>
-    <id>https://www.tanglijin.top/2023/05/vscode-help-editor/</id>
-    <published>2023-05-25T08:42:10.000Z</published>
-    <updated>2023-06-07T04:24:01.273Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;strong&gt;声明： 本文档信息来源于&lt;a href=&quot;https://code.visualstudio.com/docs&quot;&gt;VSCode官方文档&lt;/a&gt;。&lt;/strong&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="VSCode 使用" scheme="https://www.tanglijin.top/categories/VSCode-%E4%BD%BF%E7%94%A8/"/>
-    
-    
-    <category term="VSCode" scheme="https://www.tanglijin.top/tags/VSCode/"/>
     
   </entry>
   
